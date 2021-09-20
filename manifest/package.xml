@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+
+	<types>
+
+		<members>businessController</members>
+		<members>businessControllerTest</members>
+
+		
+		<members>SustainabilityController</members>
+		<members>SustainabilityExtension</members>
+		<members>SustainabilityTest</members>
+		
+		<members>HomePageCustom</members>
+		<members>HomePageExtension</members>
+		<members>HomePageTest</members>
+
+		<!--<members>AboutUsController</members>-->
+
+		<members>ProductsPageExtension</members>
+
+
+		<name>ApexClass</name>
+	</types>
+
+	<types>
+
+		<members>Business</members>
+		
+		<members>SustainabilityM</members>
+		
+		<members>MapPage</members>
+
+		<!--<members>AboutUs</members>
+		<members>Company</members>
+		<members>BoardofDirectors</members>
+		<members>PurposeValues</members>
+		<members>Careers</members>-->
+
+		<members>ProductsPage</members>
+		<members>Uranium</members>
+		<members>Platinum</members>
+		<members>Tungsten</members>
+		
+		<name>ApexPage</name>
+	</types>
+
+	<types>
+		<members>*</members>
+		<name>StaticResource</name>
+	</types>
+
+<!--
+	<types>
+		<members>*</members>
+		<name>CustomField</name>
+	</types>
+-->
+	<types>
+		<members>MiningSite__c</members>
+		<name>CustomObject</name>
+	</types>
+
+
+	<types>
+		<members>Mining_Site_Record_Page</members>
+		<name>FlexiPage</name>
+	</types>
+
+	
+
+	<!-- all other metadata from original org 
+	
+	<types>
+		<members>*</members>
+		<name>Profile</members>
+	</types>
+	
+	-->
+
+	<version>51.0</version>
+</Package>
