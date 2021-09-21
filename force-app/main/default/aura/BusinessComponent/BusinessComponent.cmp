@@ -1,5 +1,40 @@
 <aura:component >
-	<p> Header here </p>
-    <c:NewContact />
-    <c:NewContact />
+    <p> Header here </p>
+    
+    <!--span style="display: inline-block">
+        <c:BusinessProducts />
+    </span>
+    <span style="display: inline-block">
+        <c:NewContact />
+    </span>
+    
+    <c:MarketValueGraph />
+    
+    
+    
+    <div class="slds-Grid">
+        <div class="slds-col">
+            <span style="display: inline-block">
+                <c:BusinessProducts />
+            </span>
+        </div>
+        <div class="slds-col">
+            <span style="display: inline-block">
+                <c:NewContact />
+            </span>
+        </div>
+        <c:MarketValueGraph />
+    </div-->    
+    
+    
+    <lightning:layout multiplerows="true">
+        <lightning:layoutItem size="8">
+            <c:BusinessProducts />
+        </lightning:layoutItem>
+        <lightning:layoutItem size="4">
+            <c:NewContact />
+        </lightning:layoutItem>
+    </lightning:layout>  
+    <c:MarketValueGraph />
+    
 </aura:component>

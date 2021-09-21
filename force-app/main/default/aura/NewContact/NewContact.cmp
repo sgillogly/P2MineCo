@@ -1,15 +1,21 @@
-<aura:component >
+<aura:component controller="businessController">
+    <aura:attribute name="output" type="String" default="default"/>
+    
+    <!--numbers might need to be strings-->
     <form class="slds-form_stacked">
-        <lightning:input type="number" label="test label" name="testInput" value="" />
-        <lightning:input type="string" label="First Name" name="firstName" value="" />
-        <lightning:input type="string" label="Last Name" name="lastName" value="" />
-        <lightning:input type="string" label="Email" name="email" value="" />
-        <lightning:input type="number" label="Phone" name="phone" value="" />
-        <lightning:input type="number" label="Fax" name="fax" value="" />
-        <lightning:input type="string" label="Mailing Country" name="country" value="" />
-        <lightning:input type="string" label="Mailing City" name="city" value="" />
-        <lightning:input type="string" label="Mailing State/Province" name="state" value="" />
-        <lightning:input type="string" label="Mailing Street" name="street" value="" />
-        <lightning:input type="number" label="Mailing Zip/Postal Code" name="zip" value="" />
+        <lightning:input type="string" label="First Name" name="firstName" aura:id="firstname" value="" />
+        <lightning:input type="string" label="Last Name" name="lastName" aura:id="lastname" value="" />
+        <lightning:input type="string" label="Email" name="email" aura:id="email" value="" />
+        <lightning:input type="number" label="Phone" name="phone" aura:id="phone" value="" />
+        <lightning:input type="number" label="Fax" name="fax" aura:id="fax" value="" />
+        <br /><br />
+        <lightning:input type="string" label="Mailing Country" name="country" aura:id="country" value="" />
+        <lightning:input type="string" label="Mailing City" name="city" aura:id="city" value="" />
+        <lightning:input type="string" label="Mailing State/Province" name="state" aura:id="state" value="" />
+        <lightning:input type="string" label="Mailing Street" name="street" aura:id="street" value="" />
+        <lightning:input type="number" label="Mailing Zip/Postal Code" name="zip" aura:id="zip" value="" />
     </form>
+    
+    <lightning:button label="Submit" onclick="{!c.newContact}"/>
+    <p>Output: {!v.output}</p>
 </aura:component>
