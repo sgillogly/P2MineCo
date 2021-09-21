@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AuraDefinitionBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>52.0</apiVersion>
+    <description>Interfaces with BusinessComponent and CommodityApiHandler to display a graph of the markey values of specific commodities over a period of time</description>
+</AuraDefinitionBundle>

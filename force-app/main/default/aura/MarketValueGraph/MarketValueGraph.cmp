@@ -1,0 +1,17 @@
+<aura:component controller="CommodityApiHandler">
+    <aura:attribute name="content" type="String" default="default"/>
+    <aura:attribute name="metals" type="List"/>
+    
+    <p>Content: {!v.content}</p>
+    
+    <lightning:button label="Sample" onclick="{!c.chartSetup}" />
+    <lightning:button label="Actual" onclick="{!c.actualData}" />
+    
+    <aura:iteration items="{!v.metals}" var="metal" indexVar="key">
+        <p>{!metal.key}</p>
+        <aura:iteration items="{!metal.value}" var="item" indexVar="key">
+            <p>{!item.key}: {!item.value}</p>
+        </aura:iteration>
+    </aura:iteration>
+    
+</aura:component>

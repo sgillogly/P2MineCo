@@ -1,0 +1,14 @@
+<aura:component controller="businessController">
+    <aura:attribute name="itemsList" type="List"/>
+	<aura:attribute name="content" type="String" default="default"/>
+    
+    <aura:iteration items="{!v.itemsList}" var="item" indexVar="key">
+        <p style="font-weight:bold">{!item.key}:</p>
+        <p>{!item.value}</p>
+        <br />
+    </aura:iteration>
+    
+    <p>Content: {!v.content}</p>
+    
+    <lightning:button label="reload" onclick="{!c.reload}"/>
+</aura:component>

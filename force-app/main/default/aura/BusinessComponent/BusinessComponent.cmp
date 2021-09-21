@@ -1,0 +1,5 @@
+<aura:component >
+	<p> Header here </p>
+    <c:NewContact />
+    <c:NewContact />
+</aura:component>
