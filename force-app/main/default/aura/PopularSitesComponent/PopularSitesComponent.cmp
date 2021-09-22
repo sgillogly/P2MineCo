@@ -1,0 +1,24 @@
+<aura:component controller="AuraHomeController">
+    <aura:attribute name="img1Url" type="String"/>
+    <aura:attribute name="site1Name" type="String"/>
+    <aura:attribute name="site1Ore" type="String"/>
+    <aura:attribute name="img2Url" type="String"/>
+    <aura:attribute name="img3Url" type="String"/>
+    
+	<h1>Our Most Popular Mining Sites</h1>
+    <div id="Site1">
+    	<p>{!site1Name}: Ore</p>
+        <img src="{!v.img1Url}" alt="1st most popular mining site" onclick="{!c.getImg}"/>
+        <p>Map Image with Link</p>    
+    </div>
+    <div id="Site2">
+        <p>Mining Site Name: Ore</p>
+        <img src="{!v.img2Url}" alt="2nd most popular mining site" onclick="{!c.getImg2}"/>
+        <p>Map Image with Link</p>  
+    </div>
+    <div id="Site3">
+        <p>Mining Site Name: Ore</p>
+        <img name="3" src="{!v.img3Url}" alt="3rd most popular mining site" onclick="{!c.getImg3}"/>
+        <p>Map Image with Link</p>  
+    </div>
+</aura:component>
