@@ -2,26 +2,41 @@ public class CommodityApiHandler {
     public static String urlStart = 'https://data.nasdaq.com/api/v3/datasets/';
     public static String format = 'json';
     public static String frequency = 'monthly';
-    public static Integer rows = 3;
-    public static String endDate = '2021-09-18';
+    public static Integer rows = 25;
+    public static String endDate = '2021-06-30';
     public static String key = 'yzDCvvQ5ghAfjbEz59-K';
     
     @AuraEnabled
-    public static Map<String, Map<String, double>> callApiArray() {
+    public static Map<String, Map<String, double>> callApiArray(Integer rowsInput) {
+        map<String, String> preciousMetals = preciousMetalsList();
         map<String, String> metals = metalsList();
         Map<String, Map<String, double>> output = new Map<String, Map<String, double>>();
+        
+        for (String metalKey : preciousMetals.keySet()) {
+            Map<String, double> result = callApi(preciousMetals.get(metalKey), rowsInput);
+            Map<String, double> forOutput = new Map<String, double>();
+            for (String key : result.keySet()){
+                forOutput.put(key, result.get(key) * 32000);
+            }
+            output.put(metalKey, forOutput);
+        }
         for (String metalKey : metals.keySet()) {
-            output.put(metalKey, callApi(metals.get(metalKey)));
+            output.put(metalKey, callApi(metals.get(metalKey), rowsInput));
         }
         return output;
     }
     
-    public static Map<String, String> metalsList() {
+    public static Map<String, String> preciousMetalsList() {
         map<String, String> metals = new map<String, String>();
         metals.put('gold', 'LBMA/GOLD');
         metals.put('silver', 'LBMA/SILVER');
         metals.put('platinum', 'JOHNMATT/PLAT');
         metals.put('palladium', 'JOHNMATT/PALL');
+        return metals;
+    }
+    
+    public static Map<String, String> metalsList() {
+        map<String, String> metals = new map<String, String>();
         metals.put('aluminum', 'ODA/PALUM_USD');
         metals.put('copper', 'ODA/PCOPP_USD');
         metals.put('iron', 'ODA/PIORECR_USD');
@@ -33,7 +48,8 @@ public class CommodityApiHandler {
     
     //might need more specific dates
     //might need to set all to ascending with specific start date
-    public static Map<String, double> callApi(String metal) {
+    public static Map<String, double> callApi(String metal, Integer rowsInput) {
+        rows = rowsInput;
         HTTP h = new HTTP();
         HttpRequest request = new HttpRequest();
         request.setEndpoint(urlStart + metal + '.' + format + 
@@ -84,8 +100,8 @@ public class CommodityApiHandler {
     }
     
     @AuraEnabled
-    public static Map<String, Map<String, double>> realData() {
-        return callApiArray();
+    public static Map<String, Map<String, double>> realData(Integer rowsInput) {
+        return callApiArray(rowsInput);
     }
     
     @AuraEnabled

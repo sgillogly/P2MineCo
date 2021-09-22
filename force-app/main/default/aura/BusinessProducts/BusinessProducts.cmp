@@ -1,6 +1,7 @@
 <aura:component controller="businessController">
     <aura:attribute name="itemsList" type="List"/>
 	<aura:attribute name="content" type="String" default="default"/>
+    <aura:handler name="init" value="{!this}" action="{!c.reload}" />
     
     <aura:iteration items="{!v.itemsList}" var="item" indexVar="key">
         <p style="font-weight:bold">{!item.key}:</p>

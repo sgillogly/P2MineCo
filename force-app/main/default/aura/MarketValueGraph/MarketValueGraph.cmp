@@ -1,10 +1,13 @@
 <aura:component controller="CommodityApiHandler">
+    <ltng:require scripts="{!$Resource.chartjs}" afterScriptsLoaded="{!c.setup}"/>
     <aura:attribute name="content" type="String" default="default"/>
     <aura:attribute name="metals" type="List"/>
     
     <p>Content: {!v.content}</p>
     
-    <lightning:button label="Sample" onclick="{!c.chartSetup}" />
+    <canvas aura:id="chart" width="1000" height="400" />
+    
+    <lightning:button label="Sample" onclick="{!c.fakeData}" />
     <lightning:button label="Actual" onclick="{!c.actualData}" />
     
     <aura:iteration items="{!v.metals}" var="metal" indexVar="key">
