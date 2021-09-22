@@ -1,0 +1,73 @@
+<aura:component implements="forceCommunity:availableForAllPageTypes">
+    
+    <!-- 
+        Breakdown of an attribute:
+        - name: this is the attribute name which is referenced on declaration of the component
+        - type: this is the Apex analagous data type the attribute has. Note that if a collection of sObjects is to be used,
+          this must be an array (Account[]). Valid types = Boolean, Date, DateTime, Decimal, Double, Integer, Long, String, Object
+        - default: if no value is specified, the attribute defaults to the default value
+  	-->
+    
+    <aura:attribute name="Product" type="String"> </aura:attribute>
+    
+    <!--
+	In-line styling that was used in the div 
+	<div class="productDisplay" style="width:150px;height:150px;border:solid 1px red;background-color:#C0C0C0;float:left">
+    
+    </div>
+	-->
+    
+    <div class="gallery">
+  		<div class="asc">Uranium</div>
+  		<a target="_blank" href="https://miningafrica.net//wp-content/uploads/2016/08/Gummite-Uraninite-Zircon-62299.jpg">
+    		<img src="https://miningafrica.net//wp-content/uploads/2016/08/Gummite-Uraninite-Zircon-62299.jpg" alt="Uranium" width="600" height="400"></img>
+  		</a>
+	</div>
+
+	<div class="gallery">
+  		<div class="asc">Tungsten</div>  
+  		<a target="_blank" href="https://cdn.mos.cms.futurecdn.net/w6rw4dJKFqDS69R3D7NHGj-1200-80.jpg">
+            <img src="https://cdn.mos.cms.futurecdn.net/w6rw4dJKFqDS69R3D7NHGj-1200-80.jpg" alt="Tungsten" width="600" height="400"></img>
+  		</a>
+	</div>
+
+	<div class="gallery">
+        <div class="asc">Platinum</div>
+  		<a target="_blank" href="https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Platinum_crystals.jpg/1200px-Platinum_crystals.jpg">
+    		<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Platinum_crystals.jpg/1200px-Platinum_crystals.jpg" alt="Platinum" width="600" height="400"></img>
+ 		</a>
+	</div>
+    
+
+</aura:component>
+
+<!--
+    <div class="productDisplay">
+        <b class="productService">Products and Services</b> 
+        <p>Description of the products and services will go here.</p>
+    </div>    
+    
+    
+    
+    <div class="productDisplay">
+        <p>Uranium</p>
+        <img id="theImage1" src="https://miningafrica.net//wp-content/uploads/2016/08/Gummite-Uraninite-Zircon-62299.jpg" width="220" height="55" alt="Description of image here"></img>        
+    
+    </div>
+    
+    
+    
+    <div class="productDisplay">
+        <p>Tungsten</p>
+        <img id="theImage2" src="https://cdn.mos.cms.futurecdn.net/w6rw4dJKFqDS69R3D7NHGj-1200-80.jpg" width="220" height="55" alt="Description of image here"></img>
+    
+    </div>
+    
+    
+    
+    <div class="productDisplay">
+        <p>Platinum</p>
+        <img id="theImage3" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Platinum_crystals.jpg/1200px-Platinum_crystals.jpg" width="220" height="55" alt="Description of image here"></img>
+    
+    </div>	
+-->
