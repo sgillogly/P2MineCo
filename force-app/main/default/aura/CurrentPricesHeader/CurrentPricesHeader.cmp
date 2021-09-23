@@ -1,14 +1,18 @@
 <aura:component controller="CommodityApiHandler">
-    <aura:attribute name="content" type="string" default ="on"/>
-    <aura:attribute name="switch" type="boolean" />
+    <aura:attribute name="key" type="string" />
+    <aura:attribute name="value" type="string" />
     
-    <aura:attribute name="prices" type="list" />
+    <aura:attribute name="metals" type="list" />
+    <aura:attribute name="prices" type="list" />   
     <aura:attribute name="current" type="Integer" default="0"/>
-    
-    <aura:handler name="init" value="{!this}" action="{!c.startTimer}" />
+     
+    <aura:handler name="init" value="{!this}" action="{!c.setup}" />
     <div>
-	<p>
-        {!v.content}
-    </p>
+        <p style="color: white">
+            {!v.key}
+        </p>
+        <p style="color: white">
+            {!v.value}
+        </p>
     </div>
 </aura:component>

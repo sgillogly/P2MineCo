@@ -1,28 +1,14 @@
 ({
-	myAction : function(component, event, helper) {
-		
-	},
-    
-    startTimer : function(component, event, helper) {
-        let sampleData = component.get("c.sampleData");
-        sampleData.setParams({rowsInput: 1})
-        sampleData.setCallback(this, function(response) {
+    setup : function(component, event, helper) {
+        let getData = component.get("c.sampleData");
+        getData.setParams({rows: 1})
+        getData.setCallback(this, function(response) {
             var metalsMap = response.getReturnValue();
-            var singleMap = new Map();
-            var singleList = [];
-            for (var key in metalsMap) {
-                for (var innerKey in metalsMap[key]) {
-                    var entry = key + ": $" + metalsMap[key][innerKey] + " per ton";
-                    singleList.push(entry);
-                    //singleMap[key] = metalsMap[key][innerKey]
-                }
-            }
-            component.set("v.prices", singleList);
-            
+            helper.convertMapToLists(component, metalsMap);
         })
         
-        $A.enqueueAction(sampleData);
+        $A.enqueueAction(getData);
         
-		helper.flipSwitch(component);
+		helper.nextEntry(component);
 	}
 })

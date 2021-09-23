@@ -1,10 +1,12 @@
 <aura:component >
+    <aura:attribute name="currentTab" type="String" default="Business" />
+    
     <div id="header" class="slds-grid">
-        <div id="logobox" class="slds-col slds-size_1-of-6">
-            <img src="{!$Resource.MClogo}" width="100" id="logo" style="float: left"/>
+        <div class="slds-col slds-size_1-of-6">
+            <img src="{!$Resource.MClogo}" width="150" style="float: left"/>
         </div>
         <div id="headerTitle" class="slds-col">
-            <p>
+            <p style="padding: 25px">
                 Optional Title Here
             </p>
         </div>
@@ -12,22 +14,33 @@
             <c:CurrentPricesHeader />
         </div>
     </div>
-    <div id="buttons" class="slds-grid">
-        <lightning:button label="Home" class="slds-col slds-size_1-of-4"/>
-        <lightning:button label="Produts" class="slds-col slds-size_1-of-4"/>
-        <lightning:button label="Sustainability" class="slds-col slds-size_1-of-4"/>
-        <lightning:button label="Business" class="slds-col slds-size_1-of-4"/>
+    <div id="tabsBar" class="slds-grid">
+        <lightning:button name="Home" label="Home" onclick="{!c.tabClicked}" class="slds-col slds-size_1-of-4"/>
+        <lightning:button name="Produts" label="Produts" onclick="{!c.tabClicked}" class="slds-col slds-size_1-of-4"/>
+        <lightning:button name="Sustainability" label="Sustainability" onclick="{!c.tabClicked}" class="slds-col slds-size_1-of-4"/>
+        <lightning:button name="Business" label="Business" onclick="{!c.tabClicked}" class="slds-col slds-size_1-of-4"/>
     </div>
     
     
     <div class="body slds-grid">
         <br/>
-        <div class="slds-col slds-size_1-of-6">
+        <div class="slds-col slds-size_1-of-12">
         </div>
         <div class="slds-col">
-            <c:BusinessComponent />
+            <aura:if isTrue="{!v.currentTab == 'Home'}" >
+                <p style="color: white">Home Page Here</p>
+            </aura:if>        
+            <aura:if isTrue="{!v.currentTab == 'Produts'}" >
+                <p style="color: white">Products Page Here</p>
+            </aura:if>        
+            <aura:if isTrue="{!v.currentTab == 'Sustainability'}" >
+                <p style="color: white">Sustainability Page Here</p>
+            </aura:if>        
+            <aura:if isTrue="{!v.currentTab == 'Business'}" >
+                <c:BusinessComponent />
+            </aura:if>        
         </div>
-        <div class="slds-col slds-size_1-of-6">
+        <div class="slds-col slds-size_1-of-12">
         </div>
     </div>
 </aura:component>

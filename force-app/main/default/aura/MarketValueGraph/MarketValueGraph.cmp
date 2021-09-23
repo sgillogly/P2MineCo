@@ -5,11 +5,13 @@
     
     
     <div>
-        <canvas aura:id="chart" width="900" height="400" />
+        <p style="font-size: 200%; text-align: center;">Historical Market Values</p>
+        <br />
+        <canvas aura:id="chart" width="1150" height="400" />
         
         <lightning:button label="Sample" onclick="{!c.fakeData}" />
         <lightning:button label="Actual" onclick="{!c.actualData}" />
-        <p>Content: {!v.content}</p>
+        <label>Status: {!v.content}</label>
         
         <!--aura:iteration items="{!v.metals}" var="metal" indexVar="key">
         <p>{!metal.key}</p>

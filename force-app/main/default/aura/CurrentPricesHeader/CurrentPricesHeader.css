@@ -1,5 +1,9 @@
 .THIS {
-    background-color: #D0BD8D;
+    background-color: #5B1C08;
     /*color: #FFFFFF;*/
-    font-size: 50%;
+    font-size: 40%;
+    height: 150px;
+    border-radius: 20px;
+    padding:30px;
+    text-align: right;
 }

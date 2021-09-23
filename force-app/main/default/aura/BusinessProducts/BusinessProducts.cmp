@@ -4,10 +4,11 @@
     <aura:handler name="init" value="{!this}" action="{!c.reload}" />
     
     <div>
+        <p style="font-size: 200%; text-align: center;">Our Products</p>
         <div class="body">
             <aura:iteration items="{!v.itemsList}" var="item" indexVar="key">
-                <p style="font-weight:bold; color: white;">{!item.key}:</p>
-                <p style="color: white;">{!item.value}</p>
+                <p style="font-weight:bold; color: white; font-size: 130%;">{!item.key}:</p>
+                <p style="color: white; font-size: 130%;">{!item.value}</p>
                 <br />
             </aura:iteration>
         </div>

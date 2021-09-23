@@ -1,55 +1,30 @@
 public class CommodityApiHandler {
-    public static String urlStart = 'https://data.nasdaq.com/api/v3/datasets/';
-    public static String format = 'json';
-    public static String frequency = 'monthly';
-    public static Integer rows = 25;
-    public static String endDate = '2021-06-30';
-    public static String key = 'yzDCvvQ5ghAfjbEz59-K';
+    private static final String urlStart = 'https://data.nasdaq.com/api/v3/datasets/';
+    private static final String format = 'json';
+    private static final String frequency = 'monthly';
+    private static final String endDate = '2021-06-30';
+    private static final String key = 'yzDCvvQ5ghAfjbEz59-K';
+    
     
     @AuraEnabled
-    public static Map<String, Map<String, double>> callApiArray(Integer rowsInput) {
-        map<String, String> preciousMetals = preciousMetalsList();
-        map<String, String> metals = metalsList();
-        Map<String, Map<String, double>> output = new Map<String, Map<String, double>>();
+    public static Map<String, Map<String, double>> realData(Integer rows) {
+        Map<String, Map<String, double>> pricesAllMetals = new Map<String, Map<String, double>>();
         
+        map<String, String> preciousMetals = preciousMetalsList();
         for (String metalKey : preciousMetals.keySet()) {
-            Map<String, double> result = callApi(preciousMetals.get(metalKey), rowsInput);
-            Map<String, double> forOutput = new Map<String, double>();
-            for (String key : result.keySet()){
-                forOutput.put(key, result.get(key) * 32000);
-            }
-            output.put(metalKey, forOutput);
+            Map<String, double> priceHistory = callApi(preciousMetals.get(metalKey), rows);
+            pricesAllMetals.put(metalKey, convertToTons(priceHistory));
         }
-        for (String metalKey : metals.keySet()) {
-            output.put(metalKey, callApi(metals.get(metalKey), rowsInput));
+        
+        map<String, String> simpleMetals = metalsList();
+        for (String metalKey : simpleMetals.keySet()) {
+            pricesAllMetals.put(metalKey, callApi(simpleMetals.get(metalKey), rows));
         }
-        return output;
+        
+        return pricesAllMetals;
     }
     
-    public static Map<String, String> preciousMetalsList() {
-        map<String, String> metals = new map<String, String>();
-        metals.put('gold', 'LBMA/GOLD');
-        metals.put('silver', 'LBMA/SILVER');
-        metals.put('platinum', 'JOHNMATT/PLAT');
-        metals.put('palladium', 'JOHNMATT/PALL');
-        return metals;
-    }
-    
-    public static Map<String, String> metalsList() {
-        map<String, String> metals = new map<String, String>();
-        metals.put('aluminum', 'ODA/PALUM_USD');
-        metals.put('copper', 'ODA/PCOPP_USD');
-        metals.put('iron', 'ODA/PIORECR_USD');
-        metals.put('nickel', 'ODA/PNICK_USD');
-        metals.put('tin', 'ODA/PTIN_USD');
-        metals.put('zinc', 'ODA/PZINC_USD');
-        return metals;
-    }
-    
-    //might need more specific dates
-    //might need to set all to ascending with specific start date
-    public static Map<String, double> callApi(String metal, Integer rowsInput) {
-        rows = rowsInput;
+    public static Map<String, double> callApi(String metal, Integer rows) {
         HTTP h = new HTTP();
         HttpRequest request = new HttpRequest();
         request.setEndpoint(urlStart + metal + '.' + format + 
@@ -57,24 +32,21 @@ public class CommodityApiHandler {
                             '&order=desc&column_index=1&end_date=' + endDate + '&api_key=' + key);
         request.setMethod('GET');
         HttpResponse response = h.send(request);
-        //for (Integer i = 0; i < 7; i++) {
-            //System.debug(response.getBody().subString(100 * i, 100 * (i + 1)));
-        //}
-        return parseResult(response);
+        return parseResult(response, rows);
     }
     
-    public static Map<String, double> parseResult(HttpResponse response) {
+    public static Map<String, double> parseResult(HttpResponse response, Integer rows) {
         Map<String, double> parsedResults = new Map<String, double>();
         JSONParser parser = JSON.createParser(response.getBody());
         while (parser.nextToken() != null) {
             if (parser.getText() == 'data') {
                 for (Integer i = 0; i < rows; i++) {
-                parser.nextToken();
-                parser.nextToken();
-                parser.nextToken();
-                String tempString = parser.getText();
-                parser.nextToken();
-                parsedResults.put(tempString, parser.getDoubleValue());
+                    parser.nextToken();
+                    parser.nextToken();
+                    parser.nextToken();
+                    String tempString = parser.getText();
+                    parser.nextToken();
+                    parsedResults.put(tempString, parser.getDoubleValue());
                 }
             }
         }
@@ -82,10 +54,14 @@ public class CommodityApiHandler {
         return parsedResults;
     }
     
+    
+    
+    
+    
     @AuraEnabled
     public static Map<String, Map<String, double>> sampleData() {
         List<String> dates = new List<String>{'2015', '2016', '2017', '2018', '2019'};
-        Map<String, Map<String, double>> output = new Map<String, Map<String, double>>();
+            Map<String, Map<String, double>> output = new Map<String, Map<String, double>>();
         double price = 10;
         for (String metal : new List<String>{'gold', 'silver', 'copper', 'iron', 'nickel'}) {
             Map<String, double> values = new Map<String, double>();
@@ -99,13 +75,35 @@ public class CommodityApiHandler {
         return output;
     }
     
-    @AuraEnabled
-    public static Map<String, Map<String, double>> realData(Integer rowsInput) {
-        return callApiArray(rowsInput);
+    
+    
+    
+    public static Map<String, double> convertToTons(Map<String, double> result) {
+        Map<String, double> forOutput = new Map<String, double>();
+        for (String key : result.keySet()){
+            forOutput.put(key, result.get(key) * 32000);
+        }
+        return forOutput;
     }
     
-    @AuraEnabled
-    public static void logInput(String input) {
-        System.debug(input);
+    public static Map<String, String> preciousMetalsList() {
+        map<String, String> metals = new map<String, String>();
+        metals.put('Gold', 'LBMA/GOLD');
+        metals.put('Silver', 'LBMA/SILVER');
+        metals.put('Platinum', 'JOHNMATT/PLAT');
+        metals.put('Palladium', 'JOHNMATT/PALL');
+        return metals;
     }
+    
+    public static Map<String, String> metalsList() {
+        map<String, String> metals = new map<String, String>();
+        metals.put('Aluminum', 'ODA/PALUM_USD');
+        metals.put('Copper', 'ODA/PCOPP_USD');
+        metals.put('Iron', 'ODA/PIORECR_USD');
+        metals.put('Nickel', 'ODA/PNICK_USD');
+        metals.put('Tin', 'ODA/PTIN_USD');
+        metals.put('Zinc', 'ODA/PZINC_USD');
+        return metals;
+    }
+    
 }
