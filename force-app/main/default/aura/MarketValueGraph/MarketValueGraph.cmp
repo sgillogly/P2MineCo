@@ -3,18 +3,19 @@
     <aura:attribute name="content" type="String" default="default"/>
     <aura:attribute name="metals" type="List"/>
     
-    <p>Content: {!v.content}</p>
     
-    <canvas aura:id="chart" width="1000" height="400" />
-    
-    <lightning:button label="Sample" onclick="{!c.fakeData}" />
-    <lightning:button label="Actual" onclick="{!c.actualData}" />
-    
-    <aura:iteration items="{!v.metals}" var="metal" indexVar="key">
+    <div>
+        <canvas aura:id="chart" width="900" height="400" />
+        
+        <lightning:button label="Sample" onclick="{!c.fakeData}" />
+        <lightning:button label="Actual" onclick="{!c.actualData}" />
+        <p>Content: {!v.content}</p>
+        
+        <!--aura:iteration items="{!v.metals}" var="metal" indexVar="key">
         <p>{!metal.key}</p>
         <aura:iteration items="{!metal.value}" var="item" indexVar="key">
             <p>{!item.key}: {!item.value}</p>
         </aura:iteration>
-    </aura:iteration>
-    
+    </aura:iteration-->
+    </div>
 </aura:component>

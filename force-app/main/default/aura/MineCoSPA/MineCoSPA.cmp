@@ -1,0 +1,33 @@
+<aura:component >
+    <div id="header" class="slds-grid">
+        <div id="logobox" class="slds-col slds-size_1-of-6">
+            <img src="{!$Resource.MClogo}" width="100" id="logo" style="float: left"/>
+        </div>
+        <div id="headerTitle" class="slds-col">
+            <p>
+                Optional Title Here
+            </p>
+        </div>
+        <div class="slds-col slds-size_1-of-6">
+            <c:CurrentPricesHeader />
+        </div>
+    </div>
+    <div id="buttons" class="slds-grid">
+        <lightning:button label="Home" class="slds-col slds-size_1-of-4"/>
+        <lightning:button label="Produts" class="slds-col slds-size_1-of-4"/>
+        <lightning:button label="Sustainability" class="slds-col slds-size_1-of-4"/>
+        <lightning:button label="Business" class="slds-col slds-size_1-of-4"/>
+    </div>
+    
+    
+    <div class="body slds-grid">
+        <br/>
+        <div class="slds-col slds-size_1-of-6">
+        </div>
+        <div class="slds-col">
+            <c:BusinessComponent />
+        </div>
+        <div class="slds-col slds-size_1-of-6">
+        </div>
+    </div>
+</aura:component>
