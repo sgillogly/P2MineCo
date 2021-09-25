@@ -10,13 +10,13 @@ public class CommodityApiHandler {
     public static Map<String, Map<String, double>> realData(Integer rows) {
         Map<String, Map<String, double>> pricesAllMetals = new Map<String, Map<String, double>>();
         
-        map<String, String> preciousMetals = preciousMetalsList();
+        map<String, String> preciousMetals = getMetals(true); //preciousMetalsList();
         for (String metalKey : preciousMetals.keySet()) {
             Map<String, double> priceHistory = callApi(preciousMetals.get(metalKey), rows);
             pricesAllMetals.put(metalKey, convertToTons(priceHistory));
         }
         
-        map<String, String> simpleMetals = metalsList();
+        map<String, String> simpleMetals = getMetals(false);//metalsList();
         for (String metalKey : simpleMetals.keySet()) {
             pricesAllMetals.put(metalKey, callApi(simpleMetals.get(metalKey), rows));
         }
@@ -31,8 +31,13 @@ public class CommodityApiHandler {
                             '?collapse=' + frequency + '&rows=' + String.valueOf(rows) + 
                             '&order=desc&column_index=1&end_date=' + endDate + '&api_key=' + key);
         request.setMethod('GET');
+
         HttpResponse response = h.send(request);
-        return parseResult(response, rows);
+        if (response.getStatusCode() == 200) {
+            return parseResult(response, rows);
+        }
+        System.debug(response.getStatusCode());
+        return new Map<String, double>();
     }
     
     public static Map<String, double> parseResult(HttpResponse response, Integer rows) {
@@ -46,8 +51,14 @@ public class CommodityApiHandler {
                     parser.nextToken();
                     String tempString = parser.getText();
                     parser.nextToken();
-                    parsedResults.put(tempString, parser.getDoubleValue());
+                    try {
+                        parsedResults.put(tempString, parser.getDoubleValue());
+                    } catch (System.Exception e) {
+                        System.debug('Callout response underflow error (CommodityApiHandler.paresResults)');
+                        break;
+                    }
                 }
+                break;
             }
         }
         System.debug(parsedResults);
@@ -58,7 +69,7 @@ public class CommodityApiHandler {
     
     
     
-    @AuraEnabled
+    /*@AuraEnabled
     public static Map<String, Map<String, double>> sampleData() {
         List<String> dates = new List<String>{'2015', '2016', '2017', '2018', '2019'};
             Map<String, Map<String, double>> output = new Map<String, Map<String, double>>();
@@ -73,7 +84,7 @@ public class CommodityApiHandler {
         }
         System.debug(output);
         return output;
-    }
+    }*/
     
     
     
@@ -86,7 +97,7 @@ public class CommodityApiHandler {
         return forOutput;
     }
     
-    public static Map<String, String> preciousMetalsList() {
+    /*public static Map<String, String> preciousMetalsList() {
         map<String, String> metals = new map<String, String>();
         metals.put('Gold', 'LBMA/GOLD');
         metals.put('Silver', 'LBMA/SILVER');
@@ -103,6 +114,18 @@ public class CommodityApiHandler {
         metals.put('Nickel', 'ODA/PNICK_USD');
         metals.put('Tin', 'ODA/PTIN_USD');
         metals.put('Zinc', 'ODA/PZINC_USD');
+        return metals;
+    }*/
+
+    public static Map<String, String> getMetals(boolean preciousMetal) {
+
+        List<Product2> metalsList = [SELECT Name, ProductCode FROM Product2 WHERE Precious_Metal__c = :preciousMetal];
+        map<String, String> metals = new map<String, String>();
+
+        for (Product2 metal : metalsList) {
+            metals.put(metal.Name, metal.ProductCode);
+        }
+        
         return metals;
     }
     
