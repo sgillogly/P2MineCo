@@ -11,7 +11,7 @@
         <p style="color: white">
             {!v.key}
         </p>
-        <p style="color: white">
+        <p style="color: white; font-size: 80%">
             {!v.value}
         </p>
     </div>

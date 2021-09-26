@@ -1,3 +1,4 @@
 <aura:event type="APPLICATION" description="Event template" >
-<aura:attribute name="tab" type="string" />
+	<aura:attribute name="tab" type="string" />
+    <aura:attribute name="product" type="string" default="Iron"/>
 </aura:event>

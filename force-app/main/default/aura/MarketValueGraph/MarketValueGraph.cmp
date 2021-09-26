@@ -2,22 +2,17 @@
     <ltng:require scripts="{!$Resource.chartjs}" afterScriptsLoaded="{!c.setup}"/>
     <aura:attribute name="content" type="String" default="default"/>
     <aura:attribute name="metals" type="List"/>
-    
-    
+    <aura:registerEvent name="metalDetail" type="c:MineCoTabClicked" />
+    <aura:handler event="c:MineCoTabClicked" action="{!c.actualData}" />
+
     <div>
         <p style="font-size: 200%; text-align: center;">Historical Market Values</p>
         <br />
-        <canvas aura:id="chart" width="1150" height="400" />
+        <canvas aura:id="chart" style="width: 90em; height: 30em;"/>
         
-        <lightning:button label="Sample" onclick="{!c.fakeData}" />
+        <!--lightning:button label="Sample" onclick="{!c.fakeData}" />
         <lightning:button label="Actual" onclick="{!c.actualData}" />
-        <label>Status: {!v.content}</label>
-        
-        <!--aura:iteration items="{!v.metals}" var="metal" indexVar="key">
-        <p>{!metal.key}</p>
-        <aura:iteration items="{!metal.value}" var="item" indexVar="key">
-            <p>{!item.key}: {!item.value}</p>
-        </aura:iteration>
-    </aura:iteration-->
+        <label>Status: {!v.content}</label-->
+
     </div>
 </aura:component>

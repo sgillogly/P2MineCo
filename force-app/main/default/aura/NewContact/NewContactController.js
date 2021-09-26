@@ -3,6 +3,6 @@
         
     },
     newContact : function(component, event, helper) {
-        component.set("v.output", "Success");//might need error checking
+        component.set("v.output", "Thank you for joining us!");//might need error checking
     }
 })

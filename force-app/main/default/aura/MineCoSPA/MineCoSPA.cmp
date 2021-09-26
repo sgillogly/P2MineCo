@@ -1,5 +1,6 @@
-<aura:component >
+<aura:component implements="forceCommunity:availableForAllPageTypes" access="global">
     <aura:attribute name="currentTab" type="String" default="Business" />
+    <aura:handler name="metalDetail" event="c:MineCoTabClicked" action="{!c.openTab}"/>
     
     <div id="header" class="slds-grid">
         <div class="slds-col slds-size_1-of-6">
@@ -15,10 +16,10 @@
         </div>
     </div>
     <div id="tabsBar" class="slds-grid">
-        <lightning:button name="Home" label="Home" onclick="{!c.tabClicked}" class="slds-col slds-size_1-of-4"/>
-        <lightning:button name="Produts" label="Produts" onclick="{!c.tabClicked}" class="slds-col slds-size_1-of-4"/>
-        <lightning:button name="Sustainability" label="Sustainability" onclick="{!c.tabClicked}" class="slds-col slds-size_1-of-4"/>
-        <lightning:button name="Business" label="Business" onclick="{!c.tabClicked}" class="slds-col slds-size_1-of-4"/>
+        <lightning:button name="Home" label="Home" onclick="{!c.tabClicked}" class="slds-col slds-size_1-of-4 tabButton"/>
+        <lightning:button name="Products" label="Products" onclick="{!c.tabClicked}" class="slds-col slds-size_1-of-4 tabButton"/>
+        <lightning:button name="Sustainability" label="Sustainability" onclick="{!c.tabClicked}" class="slds-col slds-size_1-of-4 tabButton"/>
+        <lightning:button name="Business" label="Business" onclick="{!c.tabClicked}" class="slds-col slds-size_1-of-4 tabButton"/>
     </div>
     
     
@@ -30,7 +31,7 @@
             <aura:if isTrue="{!v.currentTab == 'Home'}" >
                 <p style="color: white">Home Page Here</p>
             </aura:if>        
-            <aura:if isTrue="{!v.currentTab == 'Produts'}" >
+            <aura:if isTrue="{!v.currentTab == 'Products'}" >
                 <p style="color: white">Products Page Here</p>
             </aura:if>        
             <aura:if isTrue="{!v.currentTab == 'Sustainability'}" >

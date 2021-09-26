@@ -10,7 +10,7 @@
         $A.enqueueAction(data);
     },*/
     
-    chartSetup : function(component, metalsMap) {
+    chartSetup : function(component, metalsMap, single) {
         //number of date/price pairs in each of the metal maps
         var numRows = Object.keys(metalsMap[Object.keys(metalsMap)[0]]).length;
         
@@ -20,7 +20,7 @@
             type: 'line',
             data: {
                 labels: this.populateLabels(numRows),
-                datasets: this.populateDatasets(metalsMap)
+                datasets: this.populateDatasets(metalsMap, single)
             }, 
             options: {
                 responsive: false
@@ -44,7 +44,7 @@
         return labels;
     },
     
-    populateDatasets : function(metalsMap) {
+    populateDatasets : function(metalsMap, single) {
         var dataSets = [];
         var colors = this.colors();
         var currentColor = -1;
@@ -61,6 +61,8 @@
                 data: data,
                 fill: false,
                 tension: 0,
+                //selected single metal is not hidden, all others are unless none were selected
+                hidden: ((single == metal) ? false : (single != null)),
                 backgroundColor: colors[currentColor],
                 borderColor: colors[currentColor]
             });

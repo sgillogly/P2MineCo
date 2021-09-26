@@ -4,3 +4,10 @@
     padding: 20px;
     margin: 20px;
 }
+
+.THIS .button {
+    color: black;
+    --sds-c-button-neutral-color-background: white;
+    --sds-c-button-neutral-color-background-active: white;
+    --sds-c-button-neutral-color-background-hover: white;
+}

@@ -1,7 +1,11 @@
 ({
-	myAction : function(component, event, helper) {
-		
-	},
+	gotoProducts : function(component, event, helper) {        
+        let fireEvent = $A.get("e.c:MineCoTabClicked");
+        fireEvent.setParams({"product" : event.target.name});
+        fireEvent.setParams({"tab" : "Business"});
+        fireEvent.fire();
+    },
+    
     reload : function(component, event, helper) {
 		let getProducts = component.get("c.getProducts");
         getProducts.setCallback(this, function(response) {
