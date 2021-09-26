@@ -22,7 +22,7 @@ public without sharing class businessController {
         return null;
     
     }
-    
+    /*
 	public PageReference HomePage() {
 		return Page.MapPage;
 
@@ -47,7 +47,7 @@ public without sharing class businessController {
 		return Page.ProductsPage;
 
 	}
-    
+    */
     // the Iron, Copper, Ice, and Thorium pages will redirect to the general productpage 
     // instead of thier individual pages, this is becuase they dont exsist but if/when 
     // they are created simple change the return value to the proper page number
