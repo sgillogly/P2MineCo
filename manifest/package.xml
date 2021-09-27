@@ -11,7 +11,6 @@
 		<members>MiningSiteServerController</members>
 		<members>MiningSiteTest</members>
 		<!--members>businessControllerTest</members>
-
 		
 		<members>SustainabilityController</members>
 		<members>SustainabilityExtension</members>
@@ -21,10 +20,9 @@
 		<members>HomePageExtension</members>
 		<members>HomePageTest</members-->
 
-		<!--<members>AboutUsController</members>-->
+		<members>AuraHomeController</members>-->
 
 		<!--members>ProductsPageExtension</members-->
-
 
 		<name>ApexClass</name>
 	</types>
@@ -64,6 +62,7 @@
 -->
 	<types>
 		<members>MiningSite__c</members>
+		<members>Tour__c</members>
 		<members>MiningRoster__c</members>
 		<name>CustomObject</name>
 	</types>

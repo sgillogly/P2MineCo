@@ -1,0 +1,69 @@
+<aura:component controller="AuraHomeController" implements="forceCommunity:availableForAllPageTypes" access="global">
+    <aura:attribute name="img1Url" type="String"/>
+    <aura:attribute name="site1Name" type="String"/>
+    <aura:attribute name="site1Ore" type="String"/>
+    <aura:attribute name="img2Url" type="String"/>
+    <aura:attribute name="site2Name" type="String"/>
+    <aura:attribute name="site2Ore" type="String"/>
+    <aura:attribute name="img3Url" type="String"/>
+    <aura:attribute name="site3Name" type="String"/>
+    <aura:attribute name="site3Ore" type="String"/>
+    <aura:handler name="init" value="{!this}" action="{!c.loadImgs}"/>
+    
+    <!-- 
+    <aura:registerEvent name="metalDetail" type="c:MineCoTabClicked" />
+    
+    <aura:handler event="c:MineCoTabClicked" action="{!c.FireEvent}" />
+    -->
+    <div>
+        
+        <div class="outer">
+            <div class="inner">
+                <h1>Our Most Popular Mining Sites</h1> 
+                <p>&ensp;Click an Image to View the Product Page!</p>
+            </div>
+        </div>
+        
+        <div class="slds-grid">
+            <div class="slds-col slds-align_absolute-center">
+                <div class="outer">
+                    <div class="inner">
+                        <span>{!v.site1Name}</span><br />
+                        <span>Primary Ore: {!v.site1Ore}</span><br />
+                        <img src="{!v.img1Url}" alt="1st most popular mining site"/>
+                    </div>
+                </div>
+            </div>
+            <div class="slds-col slds-align_absolute-center">
+                <div class="outer">
+                    <div class="inner">
+                        <span>{!v.site2Name}</span><br />
+                        <span>Primary Ore: {!v.site2Ore}</span><br />
+                        <img src="{!v.img2Url}" alt="2nd most popular mining site"/>
+                    </div>
+                </div>
+            </div>
+            <div class="slds-col slds-align_absolute-center">
+                <div class="outer">
+                    <div class="inner">
+                        <span>{!v.site3Name}</span><br />
+                        <span>Primary Ore: {!v.site3Ore}</span><br />
+                        <img src="{!v.img3Url}" alt="3rd most popular mining site"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="outer">
+            <div class="inner">
+                <h1>Welcome to Mine Co.!</h1> 
+                <p>&ensp;We have the right ores for your chores. Our mission is to provide the best quality rare-earth resources for your industrial needs. We were established in the year 2003 shortly after SpaceX, and inspired by them. We are set on practicing sustainable mining in order to deliver the resources humanity needs to build civilization not only on Earth, but up to 22 light-minutes away as well on Mars. We strictly intend on doing so in a manner which will continue to let the Earth be a habitable planet as it's always been for us, as we believe this is and should always be our home no matter how far out we may end up venturing as a species.</p>
+            </div>
+        </div>
+    </div>
+    <div class="slds-grid outer">
+        <div class="inner slds-col slds-align_absolute-center">
+            <c:GetInContactComponent/>
+        </div>
+    </div>
+</aura:component>
