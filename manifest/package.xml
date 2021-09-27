@@ -8,111 +8,18 @@
    
 
 	<types>	
-		<!--members>AboutUsController</members-->
 		<members>CommodityApiHandler</members>
 		<members>businessController</members>
 		<members>SampleDataGenerator</members>
-		<members>CommunitiesLandingController</members>
-		<members>AuraHomeController</members>
+		<!--members>CommunitiesLandingController</member-->
 		<members>MiningSiteServerController</members>
 		<members>MiningSiteTest</members>
-    
-    <members>CarbonFootprintChartApex</members>
-        
+    	<members>CarbonFootprintChartApex</members>
         <members>PillarPieChartApex</members>
-		<!--members>businessControllerTest</members>
-		
-		<members>SustainabilityController</members>
-		<members>SustainabilityExtension</members>
-		<members>SustainabilityTest</members>
-		
-		<members>HomePageCustom</members>
-		<members>HomePageExtension</members>
-		<members>HomePageTest</members-->
-
-		<members>AuraHomeController</members>-->
-
-		<!--members>ProductsPageExtension</members-->
-
+		<members>AuraHomeController</members>
 		<name>ApexClass</name>
-	</types>
+	</type>
 
-	<types>
-		<!--members>Company</members>
-		<members>AboutUs</members>
-		<members>Business</members>
-		
-		<members>SustainabilityM</members-->
-		
-		<!--members>MapPage</members-->
-
-		<!--<members>AboutUs</members>
-		<members>Company</members>
-		<members>BoardofDirectors</members>
-		<members>PurposeValues</members>
-		<members>Careers</members>-->
-
-		<!--members>ProductsPage</members>
-		<members>Uranium</members>
-		<members>Platinum</members>
-		<members>Tungsten</members-->
-		<members>CommunitiesLanding</members>
-		<name>ApexPage</name>
-	</types>
-
-	<types>
-		<members>*</members>
-		<name>StaticResource</name>
-	</types>
-
-<!--	<types>
-		<members>*</members>
-		<name>CustomField</name>
-	</types>
--->
-	<types>
-		<members>MiningSite__c</members>
-		<members>Tour__c</members>
-		<members>MiningRoster__c</members>
-		<name>CustomObject</name>
-	</types>
-
-	<types>
-		<members>Product2.Precious_Metal__c</members>
-		<members>OrderItem.Sales_report__c</members>
-		<name>CustomField</name>
-	</types>
-
-
-	<types>
-		<members>Mining_Site_Record_Page</members>
-		<name>FlexiPage</name>
-	</types>
-
-	<types>
-		<members>*</members>
-		<name>RemoteSiteSetting</name>
-	</types>
-
-	<!--types>
-		<members>*</members>
-		<name>RecordType</members>
-	</types-->
-	
-	<types>
-		<members>Admin</members>
-		<name>Profile</members>
-	</types>
-	
-	<!--types>
-		<members>MineCoCustomSite_Profile_profilePassowordPolicy1632607105227</members>
-		<name>ProfilePasswordPolicy</members>
-	</types>
-
-	<types>
-		<members>MineCoCustomSite_Profile_profileSessionSetting1632607105227</members>
-		<name>ProfileSessionSetting</members>
-	</types-->
 
 	<types>
 		<members>BusinessComponent</members>
@@ -135,17 +42,62 @@
 		<name>AuraDefinitionBundle</members>
 	</types>
 
+
+
 	<types>
-		<members>MineCoCustomSite</members>
-		<name>CustomSite</members>
+		<members>MiningSite__c</members>
+		<members>Tour__c</members>
+		<!--members>MiningRoster__c</members-->
+		<name>CustomObject</name>
+	</types>
+
+	<types>
+		<members>Product2.Precious_Metal__c</members>
+		<!--members>OrderItem.Sales_report__c</members-->
+		<name>CustomField</name>
 	</types>
 
 	<!--types>
-		<members>MineCoCustomSite</members>
-		<name>NetworkBranding</members>
+		<members>CommunitiesLanding</members>
+		<name>ApexPage</name>
 	</types-->
 
 	<types>
+		<members>*</members>
+		<name>StaticResource</name>
+	</types>
+
+<!--	<types>
+		<members>*</members>
+		<name>CustomField</name>
+	</types>
+-->
+	
+
+
+	<!--types>
+		<members>Mining_Site_Record_Page</members>
+		<name>FlexiPage</name>
+	</types-->
+
+	<types>
+		<members>*</members>
+		<name>RemoteSiteSetting</name>
+	</types>
+	
+	<types>
+		<members>Admin</members>
+		<name>Profile</members>
+	</types>
+	
+	
+
+	<!--types>
+		<members>MineCoCustomSite</members>
+		<name>CustomSite</members>
+	</types-->
+
+	<!--types>
 		<members>MineCoCustomSite</members>
 		<name>Network</members>
 	</types>
@@ -153,7 +105,7 @@
 	<types>
 		<members>MineCoCustomSite1</members>
 		<name>SiteDotCom</members>
-	</types>
+	</types-->
 
 	<version>52.0</version>
 

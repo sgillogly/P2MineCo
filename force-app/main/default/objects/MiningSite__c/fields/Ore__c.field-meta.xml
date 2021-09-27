@@ -5,15 +5,6 @@
     <description>Ore that this site has</description>
     <externalId>false</externalId>
     <label>Primary Ore</label>
-    <lookupFilter>
-        <active>true</active>
-        <filterItems>
-            <field>Product2.Family</field>
-            <operation>equals</operation>
-            <value>Ore</value>
-        </filterItems>
-        <isOptional>false</isOptional>
-    </lookupFilter>
     <referenceTo>Product2</referenceTo>
     <relationshipLabel>Mining Sites</relationshipLabel>
     <relationshipName>MiningSites</relationshipName>
