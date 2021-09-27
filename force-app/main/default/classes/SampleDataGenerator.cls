@@ -38,9 +38,18 @@ public with sharing class SampleDataGenerator {
 
         Insert products;
 
+        products = [SELECT id FROM Product2];
+        System.debug(products[0].id);
+
+        List<MiningSite__c> sites = new List<MiningSite__c>();
+        sites.add(new MiningSite__c(Name = 'name1', EstimatedWorth__c = 10000, Location__latitude__s = 30.0, Location__longitude__s = 100, Ore__c = products[0].id));
+        sites.add(new MiningSite__c(Name = 'name2', EstimatedWorth__c = 20000, Location__latitude__s = 30.0, Location__longitude__s = 100, Ore__c = products[1].id));
+        sites.add(new MiningSite__c(Name = 'name3', EstimatedWorth__c = 30000, Location__latitude__s = 30.0, Location__longitude__s = 100, Ore__c = products[2].id));
+        Insert sites;
     }
 
     public static void deleteDefaultData() {
         Delete [SELECT id FROM Product2];
+        Delete [SELECT id FROM MiningSite__c];
     }
 }

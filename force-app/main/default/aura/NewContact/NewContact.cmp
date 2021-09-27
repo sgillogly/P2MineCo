@@ -4,14 +4,14 @@
     <div>
         <p style="font-size: 200%; text-align: center;">Interested?</p>
         <p style="font-size: 200%; text-align: center;">Join our mailing list:</p>
-        <lightning:recordEditForm objectApiName="Contact" onsuccess="{!c.newContact}">
+        <lightning:recordEditForm objectApiName="Contact" onsuccess="{!c.newContact}" onerror="{!c.newContact}">
             <lightning:inputField fieldName="Name" />
             <lightning:inputField fieldName="Email" />
             <lightning:inputField fieldName="Phone" />
             <lightning:inputField fieldName="Fax" />
             <lightning:inputField fieldName="MailingAddress" />
             
-            <lightning:messages />
+            <!--lightning:messages /-->
             <lightning:button label="Submit" type="submit" class="button"/>
             <label style="float: right; font-size: 150%;">{!v.output}</label>
         </lightning:recordEditForm>

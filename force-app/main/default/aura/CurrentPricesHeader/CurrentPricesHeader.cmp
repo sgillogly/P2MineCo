@@ -8,10 +8,10 @@
      
     <aura:handler name="init" value="{!this}" action="{!c.setup}" />
     <div>
-        <p style="color: white">
+        <p style="color: #523A28">
             {!v.key}
         </p>
-        <p style="color: white; font-size: 80%">
+        <p style="color: #523A28; font-size: 80%">
             {!v.value}
         </p>
     </div>

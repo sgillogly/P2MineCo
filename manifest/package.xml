@@ -7,6 +7,9 @@
 		<members>businessController</members>
 		<members>SampleDataGenerator</members>
 		<members>CommunitiesLandingController</members>
+		<members>AuraHomeController</members>
+		<members>MiningSiteServerController</members>
+		<members>MiningSiteTest</members>
 		<!--members>businessControllerTest</members>
 
 		
@@ -88,7 +91,7 @@
 	</types-->
 	
 	<types>
-		<members>Guest License User</members>
+		<members>Admin</members>
 		<name>Profile</members>
 	</types>
 	
@@ -111,6 +114,15 @@
 		<members>MineCoSPA</members>
 		<members>MineCoTabClicked</members>
 		<members>NewContact</members>
+
+		<members>CarbonFootprintChart</members>
+		<members>ChartGrid</members>
+		<members>MiningSiteInfo</members>
+		<members>PillarPieChart</members>
+		<members>Sustainability</members>
+		<members>SustainabilityHarness</members>
+		<members>GetInContactComponent</members>
+		<members>PopularSitesComponent</members>
 		<name>AuraDefinitionBundle</members>
 	</types>
 
