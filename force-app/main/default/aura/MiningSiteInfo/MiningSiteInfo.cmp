@@ -1,0 +1,23 @@
+<aura:component controller="MiningSiteServerController">
+    <aura:attribute name="Site" type="MiningSite__c" access="private"/>
+    <div class="slds-grid">
+    	<div class="slds-col" onkeyup="{!c.QuerySite}">
+        	<div class="outer">
+            	<div class="inner">
+					<h1 style="font-size: 20pt">Mining Site Information</h1>
+        			<lightning:input type="search" class="searchInput" aura:id="Search1" placeholder="Mining Site Name" name="Mining Site Search" />
+				</div>
+        	</div>
+        </div>
+    	<lightning:recordViewForm recordId="{!v.Site}" objectApiName="MiningSite__c">
+	        <div class="outer">
+        		<div class="slds-col">
+            		<lightning:outputField fieldName="Ore__c" />
+            		<lightning:outputField fieldName="Status__c"/>
+            		<lightning:outputField fieldName="Active__c"/>
+            		<lightning:outputField fieldName="Carbon_Footprint__c"/>
+            	</div>
+            </div>
+    	</lightning:recordViewForm>
+    </div>
+</aura:component>
