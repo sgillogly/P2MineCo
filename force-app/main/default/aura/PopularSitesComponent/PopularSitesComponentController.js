@@ -9,5 +9,8 @@
         helper.ApexUrlMethod(component, 2);
         helper.ApexSiteNameMethod(component, 2);
         helper.ApexSiteOreMethod(component, 2);
+    },
+    FireEvent : function(component, event, helper) {
+        helper.ProcessFireEvent(component, event);
     }
 })

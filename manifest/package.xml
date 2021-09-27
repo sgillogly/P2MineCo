@@ -5,7 +5,6 @@
 
 		<members>businessController</members>
 		<members>businessControllerTest</members>
-
 		
 		<members>SustainabilityController</members>
 		<members>SustainabilityExtension</members>
@@ -15,10 +14,9 @@
 		<members>HomePageExtension</members>
 		<members>HomePageTest</members>
 
-		<!--<members>AboutUsController</members>-->
+		<members>AuraHomeController</members>-->
 
 		<members>ProductsPageExtension</members>
-
 
 		<name>ApexClass</name>
 	</types>
@@ -30,13 +28,7 @@
 		<members>SustainabilityM</members>
 		
 		<members>MapPage</members>
-
-		<!--<members>AboutUs</members>
-		<members>Company</members>
-		<members>BoardofDirectors</members>
-		<members>PurposeValues</members>
-		<members>Careers</members>-->
-
+		
 		<members>ProductsPage</members>
 		<members>Uranium</members>
 		<members>Platinum</members>
@@ -58,6 +50,7 @@
 -->
 	<types>
 		<members>MiningSite__c</members>
+		<members>Tour__c</members>
 		<name>CustomObject</name>
 	</types>
 

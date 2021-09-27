@@ -18,7 +18,13 @@ public class AuraHomeController {
         return url;
     }
     
-    private String toolTipBase(Integer idx){
-        return top3[idx].Name + ', primary ore ' + top3[idx].Ore__r.Name;
+    @AuraEnabled
+    public static String SiteName(Integer idx){
+        return top3[idx].Name;
+    }
+    
+    @AuraEnabled
+    public static String SiteOre(Integer idx){
+        return top3[idx].Ore__r.Name;
     }
 }
