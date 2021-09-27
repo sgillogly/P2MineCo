@@ -1,0 +1,24 @@
+.THIS .inner{
+    border-radius: 1rem;
+    background-color: #5B1C08;
+    text-align: center;
+    color: #D0BD8D;
+}
+
+.THIS .outer{
+    border-radius: 10rem;
+    background-color: #D0BD8D;
+    padding: 1rem;
+}
+
+.THIS h2{
+    font-weight: bold;
+}
+
+.THIS .slds-form-element__label{
+    color: #D0BD8D;
+}
+
+.THIS .slds-input{
+    color: #5B1C08
+}

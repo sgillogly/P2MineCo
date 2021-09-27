@@ -1,4 +1,4 @@
-public class businessController {
+public without sharing class businessController {
     public contact conString{get;set;}
     public Boolean bConCreated{get;set;}
     public businessController(){
@@ -22,7 +22,7 @@ public class businessController {
         return null;
     
     }
-    
+    /*
 	public PageReference HomePage() {
 		return Page.MapPage;
 
@@ -47,8 +47,20 @@ public class businessController {
 		return Page.ProductsPage;
 
 	}
-    
+    */
     // the Iron, Copper, Ice, and Thorium pages will redirect to the general productpage 
     // instead of thier individual pages, this is becuase they dont exsist but if/when 
     // they are created simple change the return value to the proper page number
+    
+    
+    @AuraEnabled
+    public static Map<String, String> getProducts() {
+        List<Product2> products = [SELECT Name, Description FROM Product2 WHERE NOT Description = null LIMIT 10];
+        Map<String, String> resultMap = new Map<String, String>();
+        for (Product2 current : products) {
+            resultMap.put(current.Name, current.Description);
+        }
+        return resultMap;
+    }
+    
 }

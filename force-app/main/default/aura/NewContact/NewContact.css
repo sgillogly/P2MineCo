@@ -1,0 +1,13 @@
+.THIS {
+    background-color: #D0BD8D;
+    border-radius: 20px;
+    padding: 20px;
+    margin: 20px;
+}
+
+.THIS .button {
+    color: black;
+    --sds-c-button-neutral-color-background: white;
+    --sds-c-button-neutral-color-background-active: white;
+    --sds-c-button-neutral-color-background-hover: white;
+}

@@ -1,0 +1,19 @@
+<aura:component > 
+    <aura:attribute name="leadSaved" type="boolean" default="false" />
+    
+    <div class="outer">
+        <div class="inner">
+            <h2>Contact Us!</h2>
+            <aura:if isTrue="{!v.leadSaved}">
+                <span>Your contact information has been recorded.</span>
+            </aura:if>
+            <lightning:recordEditForm objectApiName="Lead" density="compact">
+                <lightning:inputField fieldName="Name" />
+                <lightning:inputField aura:id="companyName" fieldName="Company" />
+                <lightning:inputField fieldName="Email" required="true"/>
+                <lightning:inputField fieldName="Phone" required="true"/>
+                <lightning:button label="Submit" type="Submit" onclick="{!c.newLead}" />
+            </lightning:recordEditForm>
+        </div>
+    </div>
+</aura:component>

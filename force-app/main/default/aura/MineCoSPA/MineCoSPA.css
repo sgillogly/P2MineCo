@@ -1,0 +1,28 @@
+.THIS {
+}
+#header.THIS {
+    /*delete sfsites/c to view in preview)*/
+    background-image: url('/sfsites/c/resource/1632150868000/HomePageCoverPic') !important;
+    background-repeat: no-repeat;
+    /*background-size: contain;*/
+    background-position: center center;
+    width: 100%;
+    text-align: center;
+    font-size: 350%;
+}
+#tabsBar.THIS {
+    background-color: #5B1C08;
+    text-align: center;
+}
+.THIS.body {
+    background-color: #5B1C08;
+}
+
+.THIS .tabButton {
+    font-size: 150%;
+    height: 3em;
+    color: black;
+    --sds-c-button-neutral-color-background: #D0BD8D;
+    --sds-c-button-neutral-color-background-active: #D0BD8D;
+    --sds-c-button-neutral-color-background-hover: #C0BC8C;
+}

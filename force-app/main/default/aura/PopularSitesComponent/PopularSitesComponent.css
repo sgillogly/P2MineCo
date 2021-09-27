@@ -1,0 +1,35 @@
+.THIS {
+    background: #5B1C08;
+    color: #D0BD8D;
+    padding: 10px;
+    --sds-c-card-color-background: #5B1C08;
+    --sds-c-card-text-color: #D0BD8D; 
+    --sds-c-card-color-border: #D0BD8D; 
+    --sds-c-card-radius-border: 10px;
+    --sds-c-card-sizing-border: 30px;
+    --sds-c-card-content-radius-border: 10px;
+}
+
+.THIS h1{
+    font-weight: bold;
+}
+
+.THIS .inner{
+    border-radius: 10px;
+    background-color: #5B1C08;
+    text-align: center;
+}
+
+.THIS .outer{
+    border-radius: 10px;
+    background-color: #D0BD8D;
+    padding: 1rem;
+}
+
+.THIS div {
+    padding: 10px;
+}
+
+.THIS p {
+    padding: 5px;
+}
