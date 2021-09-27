@@ -1,5 +1,22 @@
 @isTest
 public class businessControllerTest {
+    @TestSetup
+    static void makeData(){
+        
+        List<Product2> products = new List<Product2>();
+        products.add(new Product2(Name = 'Gold', ProductCode = 'LBMA/GOLD', Precious_Metal__c = true, Description = 'a'));
+        products.add(new Product2(Name = 'Silver', ProductCode = 'LBMA/SILVER', Precious_Metal__c = true, Description = 'a'));
+        products.add(new Product2(Name = 'Platinum', ProductCode = 'JOHNMATT/PLAT', Precious_Metal__c = true, Description = 'a'));
+        products.add(new Product2(Name = 'Palladium', ProductCode = 'JOHNMATT/PALL', Precious_Metal__c = true, Description = 'a'));
+        products.add(new Product2(Name = 'Aluminum', ProductCode = 'ODA/PALUM_USD', Precious_Metal__c = false, Description = 'a'));
+        products.add(new Product2(Name = 'Copper', ProductCode = 'ODA/PCOPP_USD', Precious_Metal__c = false, Description = 'a'));
+        products.add(new Product2(Name = 'Iron', ProductCode = 'ODA/PIORECR_USD', Precious_Metal__c = false, Description = 'a'));
+        products.add(new Product2(Name = 'Nickel', ProductCode = 'ODA/PNICK_USD', Precious_Metal__c = false, Description = 'a'));
+        products.add(new Product2(Name = 'Tin', ProductCode = 'ODA/PTIN_USD', Precious_Metal__c = false, Description = 'a'));
+        products.add(new Product2(Name = 'Zinc', ProductCode = 'ODA/PZINC_USD', Precious_Metal__c = false, Description = 'a'));
+
+        Insert products;
+    }
 
     @isTest
     public static void TP_SaveTo(){
@@ -78,7 +95,26 @@ public class businessControllerTest {
         test.stopTest();
     }    
     
+    @isTest
+    public static void getProductsSP() {
+        Test.startTest();
 
+        Map<String, String> expected = new Map<String, String>();
+        expected.put('Gold', 'a');
+        expected.put('Silver', 'a');
+        expected.put('Platinum', 'a');
+        expected.put('Palladium', 'a');
+        expected.put('Aluminum', 'a');
+        expected.put('Copper', 'a');
+        expected.put('Iron', 'a');
+        expected.put('Nickel', 'a');
+        expected.put('Tin', 'a');
+        expected.put('Zinc', 'a');
+
+        System.assertEquals(expected, businessController.getProducts());
+
+        Test.stopTest();
+    }
 
     
 }

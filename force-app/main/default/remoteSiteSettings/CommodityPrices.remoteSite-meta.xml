@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RemoteSiteSetting xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Nasdaq&apos;s Data Link API for retrieving commodity prices over time for BusinessComponent</description>
+    <disableProtocolSecurity>false</disableProtocolSecurity>
+    <isActive>true</isActive>
+    <url>https://data.nasdaq.com</url>
+</RemoteSiteSetting>

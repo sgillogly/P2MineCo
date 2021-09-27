@@ -1,0 +1,17 @@
+<aura:component controller="businessController">
+    <aura:attribute name="itemsList" type="List"/>
+    <aura:registerEvent name="metalDetail" type="c:MineCoTabClicked" />
+    <aura:handler name="init" value="{!this}" action="{!c.reload}" />
+    
+    <div>
+        <p style="font-size: 200%; text-align: center;">Our Products</p>
+        <div class="body">
+            <aura:iteration items="{!v.itemsList}" var="item" indexVar="key">
+                <p style="font-weight:bold; color: #523A28; font-size: 130%;">{!item.key}:</p>
+                <p style="color: #523A28; font-size: 100%;">{!item.value}</p>
+                <a name="{!item.key}" label="Learn more" onclick="{!c.gotoProducts}" style="color: #523A28;">Learn more</a>
+                <br />
+            </aura:iteration>
+        </div>
+    </div>
+</aura:component>
