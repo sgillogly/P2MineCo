@@ -1,10 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
 
-	<types>
-
+	<types>	
+		<!--members>AboutUsController</members-->
+		<members>CommodityApiHandler</members>
 		<members>businessController</members>
-		<members>businessControllerTest</members>
+		<members>SampleDataGenerator</members>
+		<members>CommunitiesLandingController</members>
+		<members>AuraHomeController</members>
+		<members>MiningSiteServerController</members>
+		<members>MiningSiteTest</members>
+		<!--members>businessControllerTest</members>
 
 		
 		<members>SustainabilityController</members>
@@ -13,23 +19,24 @@
 		
 		<members>HomePageCustom</members>
 		<members>HomePageExtension</members>
-		<members>HomePageTest</members>
+		<members>HomePageTest</members-->
 
 		<!--<members>AboutUsController</members>-->
 
-		<members>ProductsPageExtension</members>
+		<!--members>ProductsPageExtension</members-->
 
 
 		<name>ApexClass</name>
 	</types>
 
 	<types>
-
+		<!--members>Company</members>
+		<members>AboutUs</members>
 		<members>Business</members>
 		
-		<members>SustainabilityM</members>
+		<members>SustainabilityM</members-->
 		
-		<members>MapPage</members>
+		<!--members>MapPage</members-->
 
 		<!--<members>AboutUs</members>
 		<members>Company</members>
@@ -37,11 +44,11 @@
 		<members>PurposeValues</members>
 		<members>Careers</members>-->
 
-		<members>ProductsPage</members>
+		<!--members>ProductsPage</members>
 		<members>Uranium</members>
 		<members>Platinum</members>
-		<members>Tungsten</members>
-		
+		<members>Tungsten</members-->
+		<members>CommunitiesLanding</members>
 		<name>ApexPage</name>
 	</types>
 
@@ -50,15 +57,21 @@
 		<name>StaticResource</name>
 	</types>
 
-<!--
-	<types>
+<!--	<types>
 		<members>*</members>
 		<name>CustomField</name>
 	</types>
 -->
 	<types>
 		<members>MiningSite__c</members>
+		<members>MiningRoster__c</members>
 		<name>CustomObject</name>
+	</types>
+
+	<types>
+		<members>Product2.Precious_Metal__c</members>
+		<members>OrderItem.Sales_report__c</members>
+		<name>CustomField</name>
 	</types>
 
 
@@ -67,16 +80,71 @@
 		<name>FlexiPage</name>
 	</types>
 
-	
-
-	<!-- all other metadata from original org 
-	
 	<types>
 		<members>*</members>
+		<name>RemoteSiteSetting</name>
+	</types>
+
+	<!--types>
+		<members>*</members>
+		<name>RecordType</members>
+	</types-->
+	
+	<types>
+		<members>Admin</members>
 		<name>Profile</members>
 	</types>
 	
-	-->
+	<!--types>
+		<members>MineCoCustomSite_Profile_profilePassowordPolicy1632607105227</members>
+		<name>ProfilePasswordPolicy</members>
+	</types>
 
-	<version>51.0</version>
+	<types>
+		<members>MineCoCustomSite_Profile_profileSessionSetting1632607105227</members>
+		<name>ProfileSessionSetting</members>
+	</types-->
+
+	<types>
+		<members>BusinessComponent</members>
+		<members>BusinessComponentHarness</members>
+		<members>BusinessProducts</members>
+		<members>CurrentPricesHeader</members>
+		<members>MarketValueGraph</members>
+		<members>MineCoSPA</members>
+		<members>MineCoTabClicked</members>
+		<members>NewContact</members>
+
+		<members>CarbonFootprintChart</members>
+		<members>ChartGrid</members>
+		<members>MiningSiteInfo</members>
+		<members>PillarPieChart</members>
+		<members>Sustainability</members>
+		<members>SustainabilityHarness</members>
+		<members>GetInContactComponent</members>
+		<members>PopularSitesComponent</members>
+		<name>AuraDefinitionBundle</members>
+	</types>
+
+	<types>
+		<members>MineCoCustomSite</members>
+		<name>CustomSite</members>
+	</types>
+
+	<!--types>
+		<members>MineCoCustomSite</members>
+		<name>NetworkBranding</members>
+	</types-->
+
+	<types>
+		<members>MineCoCustomSite</members>
+		<name>Network</members>
+	</types>
+
+	<types>
+		<members>MineCoCustomSite1</members>
+		<name>SiteDotCom</members>
+	</types>
+
+	<version>52.0</version>
 </Package>
