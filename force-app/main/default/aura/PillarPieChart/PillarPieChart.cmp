@@ -1,0 +1,18 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes" 
+                access="global" 
+                controller="PillarPieChartApex">
+    <ltng:require scripts="{!$Resource.Chart}" 
+                  afterScriptsLoaded="{!c.afterScriptLoad}"/> 
+        <div class="slds-p-left_medium">
+            <div class="outer">
+                <div class="inner">
+            	<div class="slds-col-header__title slds-align_absolute-center">
+                	<h1 style="font-size: 20pt">Our Pillars of Sustainability</h1>
+            	</div>
+            	<div id = "colors">
+                		<canvas id="colorCanvas" height="299"></canvas>
+            	</div>
+                </div>
+            </div>
+        </div>
+</aura:component>

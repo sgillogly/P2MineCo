@@ -1,0 +1,16 @@
+<aura:component >
+    <div>
+    	<div class="outer">
+	    	<div class="inner">
+    			<h1 style="font-size: 20pt">What is Sustainability?</h1>
+				<p>Sustainability is based on a simple principle: Everything that we need for our survival and well-being depends, either directly or indirectly, on our natural environment. To pursue sustainability is to create and maintain the conditions under which humans and nature can exist in productive harmony to support present and future generations.
+			</p>
+    		</div>
+	    	<div class="inner">
+    			<h1 style="font-size: 20pt">Mining and Sustainability</h1>
+				<p>Sustainability is based on a simple principle: Everything that we need for our survival and well-being depends, either directly or indirectly, on our natural environment. To pursue sustainability is to create and maintain the conditions under which humans and nature can exist in productive harmony to support present and future generations.
+			</p>
+    		</div>
+    	</div>
+    </div>
+</aura:component>

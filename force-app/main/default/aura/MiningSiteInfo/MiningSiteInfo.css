@@ -1,0 +1,35 @@
+.THIS {
+    background: #C38370;
+    color: #523A28;
+    padding: 1rem;
+    text-align: 'center';
+}
+
+.THIS h1{
+    font-weight: 'bold';
+}
+
+.THIS div {
+    padding: 1rem;
+}
+
+.THIS .inner{
+    border-radius: 1rem;
+    background-color: #C38370;
+    text-align: 'center';
+    margin: 1rem;
+}
+
+.THIS .outer{
+    border-radius: 1.5rem;
+    background-color: #D0BD8D;
+    padding: 1rem;
+}
+
+.THIS .searchInput{
+    color: black;
+}
+
+.THIS input[type=search] {
+    margin: -0.5rem;
+}
