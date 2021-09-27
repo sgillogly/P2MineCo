@@ -10,6 +10,11 @@
     <aura:attribute name="site3Ore" type="String"/>
     <aura:handler name="init" value="{!this}" action="{!c.loadImgs}"/>
     
+    <!-- 
+    <aura:registerEvent name="metalDetail" type="c:MineCoTabClicked" />
+    
+    <aura:handler event="c:MineCoTabClicked" action="{!c.FireEvent}" />
+    -->
     <div>
         
         <div class="outer">

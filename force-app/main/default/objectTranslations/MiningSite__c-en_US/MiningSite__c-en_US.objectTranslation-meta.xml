@@ -8,13 +8,6 @@
         <plural>true</plural>
         <value>Mining Sites</value>
     </caseValues>
-    <layouts>
-        <layout>Mining Site Layout</layout>
-        <sections>
-            <label></label>
-            <section>Custom Links</section>
-        </sections>
-    </layouts>
     <startsWith>Consonant</startsWith>
     <validationRules>
         <errorMessage></errorMessage>
