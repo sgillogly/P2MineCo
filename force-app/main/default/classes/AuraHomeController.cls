@@ -15,7 +15,19 @@ public without sharing class AuraHomeController {
         
 		String url = base + 'c=' + lat + '%2C' + lon + zoomAndKey;
 		System.debug(url);
-        return url;
+        
+        
+        Http h = new Http();
+        HttpRequest req = new HttpRequest();
+        req.setEndpoint(url);
+        req.setMethod('GET');
+        HttpResponse response = h.send(req);
+        
+        Blob responseImage = response.getBodyAsBlob();
+        
+        System.debug(response.getBody());
+        //return url;
+        return  'data:'+response.getHeader('Content-Type')+';base64,'+EncodingUtil.base64Encode(responseImage);
     }
     
     @AuraEnabled
