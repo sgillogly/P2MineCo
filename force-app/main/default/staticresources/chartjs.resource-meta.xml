@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StaticResource xmlns="http://soap.sforce.com/2006/04/metadata">
+    <cacheControl>Public</cacheControl>
+    <contentType>application/x-javascript</contentType>
+    <description>Library from chart.js, found on this website
+https://www.forcetrails.com/2019/10/using-chartjs-in-lightning-web.html</description>
+</StaticResource>

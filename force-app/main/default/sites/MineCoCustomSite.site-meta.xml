@@ -22,9 +22,8 @@
     <redirectToCustomDomain>false</redirectToCustomDomain>
     <referrerPolicyOriginWhenCrossOrigin>true</referrerPolicyOriginWhenCrossOrigin>
     <selfRegPage>CommunitiesSelfReg</selfRegPage>
-    <!--siteAdmin>awensley@curious-moose-6dwoid.com</siteAdmin>
-    <siteGuestRecordDefaultOwner>awensley@curious-moose-6dwoid.com</siteGuestRecordDefaultOwner-->
+    
     <siteType>ChatterNetwork</siteType>
-    <subdomain>minecosample-developer-edition</subdomain>
+    <subdomain>minecosample2-developer-edition</subdomain>
     <urlPathPrefix>custom</urlPathPrefix>
 </CustomSite>

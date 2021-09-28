@@ -3,8 +3,8 @@
     
     <div class="outer">
         <div class="inner">
-            <h2>Schedule a Tour!</h2>
-            <p>{!v.successMessage}</p>
+            <h2 style="color: #523A28; font-size: 200%;">Schedule a Tour!</h2>
+            <p style="color: #523A28; font-size: 125%;">{!v.successMessage}</p>
             <lightning:recordEditForm objectApiName="Tour__c" density="compact" onsuccess="{!c.newTour}">
                 <lightning:inputField fieldName="Name__c" />
                 <lightning:inputField fieldName="Email__c" />

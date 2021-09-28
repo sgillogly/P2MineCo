@@ -1,0 +1,21 @@
+<aura:component >
+    
+    <aura:attribute name="Case" type="String"></aura:attribute>
+        
+    <lightning:RecordEditForm objectApiName="Case" onsuccess="{!c.newCase}">
+        
+        <lightning:inputField fieldName="ContactId"></lightning:inputField>
+        <lightning:inputField fieldName="AccountId"></lightning:inputField>
+        <lightning:inputField fieldName="Type"></lightning:inputField>
+        <lightning:inputField fieldName="Reason"></lightning:inputField>
+        <lightning:inputField fieldName="Status"></lightning:inputField>
+        <lightning:inputField fieldName="Priority"></lightning:inputField>
+        <lightning:inputField fieldName="Origin"></lightning:inputField>
+        
+        <lightning:messages />
+        <lightning:button label="Submit" type="submit" class="button"></lightning:button>  
+		<label>{!v.Case}</label>
+        
+    </lightning:RecordEditForm>
+	
+</aura:component>

@@ -3,9 +3,9 @@
     
     <div class="outer">
         <div class="inner">
-            <h2>Contact Us!</h2>
+            <h2 style="color: #523A28; font-size: 200%;">Contact Us!</h2>
             <aura:if isTrue="{!v.leadSaved}">
-                <span>Your contact information has been recorded.</span>
+                <span style="color: #523A28; font-size: 125%;">Your contact information has been recorded.</span>
             </aura:if>
             <lightning:recordEditForm objectApiName="Lead" density="compact">
                 <lightning:inputField fieldName="Name" />

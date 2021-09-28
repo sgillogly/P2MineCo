@@ -7,7 +7,7 @@
             <div class="outer">
                 <div class="inner">
             	<div class="slds-col-header__title slds-align_absolute-center">
-                	<h1 style="font-size: 20pt">Our Pillars of Sustainability</h1>
+                	<h1 style="font-size: 20pt; color: #523A28;">Our Pillars of Sustainability</h1>
             	</div>
             	<div id = "colors">
                 		<canvas id="colorCanvas" height="299"></canvas>

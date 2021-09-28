@@ -18,3 +18,11 @@
     --sds-c-button-neutral-color-background-active: white;
     --sds-c-button-neutral-color-background-hover: white;
 }
+
+.THIS .slds-form-element__label{
+    color: #523A28;
+}
+
+.THIS .slds-input{
+    color: black;
+}

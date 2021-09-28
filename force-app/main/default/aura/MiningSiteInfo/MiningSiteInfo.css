@@ -33,3 +33,11 @@
 .THIS input[type=search] {
     margin: -0.5rem;
 }
+
+.THIS .slds-form-element__label{
+    color: #523A28;
+}
+
+.THIS .slds-input{
+    color: black;
+}

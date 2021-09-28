@@ -6,7 +6,7 @@
     <div>
         
         <div class="body">
-            <p style="font-size: 200%; text-align: center;">Our Products</p>
+            <p style="font-size: 200%; text-align: center; color: #523A28;">Our Products</p>
             <aura:iteration items="{!v.itemsList}" var="item" indexVar="key">
                 <p style="font-weight:bold; color: #523A28; font-size: 130%;">{!item.key}:</p>
                 <p style="color: #523A28; font-size: 100%;">{!item.value}</p>

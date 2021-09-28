@@ -7,7 +7,7 @@
             <img src="{!$Resource.MClogo}" width="150" style="float: left"/>
         </div>
         <div id="headerTitle" class="slds-col">
-            <p style="padding: 25px">
+            <p style="padding: 25px; color: #523A28;">
                 Mine Co.
             </p>
         </div>
@@ -32,7 +32,7 @@
                 <c:PopularSitesComponent />
             </aura:if>        
             <aura:if isTrue="{!v.currentTab == 'Products'}" >
-                <p style="color: white">Products Page Here</p>
+                <c:Products />
             </aura:if>        
             <aura:if isTrue="{!v.currentTab == 'Sustainability'}" >
                 <c:MiningSiteInfo />

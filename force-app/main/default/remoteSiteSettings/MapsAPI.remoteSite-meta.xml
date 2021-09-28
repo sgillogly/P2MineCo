@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RemoteSiteSetting xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Map API that&apos;s used as a source for image files, trying to add it as a remote site to see if guest users can access it.</description>
+    <disableProtocolSecurity>false</disableProtocolSecurity>
+    <isActive>true</isActive>
+    <url>https://image.maps.ls.hereapi.com</url>
+</RemoteSiteSetting>

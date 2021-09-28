@@ -22,7 +22,7 @@
 .THIS .tabButton {
     font-size: 150%;
     height: 3em;
-    color: black;
+    color: #523A28;
     --sds-c-button-neutral-color-background: #a48464;
     --sds-c-button-neutral-color-background-active: #a48464;
     --sds-c-button-neutral-color-background-hover: #a48464;

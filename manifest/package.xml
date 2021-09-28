@@ -17,7 +17,6 @@
     	<members>CarbonFootprintChartApex</members>
         <members>PillarPieChartApex</members>
 		<members>AuraHomeController</members>
-		<members>ProductApexController</members>
 		<name>ApexClass</name>
 	</type>
 
@@ -42,6 +41,7 @@
 		<members>PopularSitesComponent</members>
 		<members>ScheduleTourComponent</members>
 		<members>Products</members>
+		<members>CaseComponentActual</members>
 		<name>AuraDefinitionBundle</members>
 	</types>
 
@@ -60,10 +60,10 @@
 		<name>CustomField</name>
 	</types>
 
-	<!--types>
+	<types>
 		<members>CommunitiesLanding</members>
 		<name>ApexPage</name>
-	</types-->
+	</types>
 
 	<types>
 		<members>*</members>
@@ -71,7 +71,7 @@
 	</types>
 
 	<types>
-		<members>GuestUser</members>
+		<members>GuestPermissions</members>
 		<name>PermissionSet</name>
 	</types>
 
@@ -104,12 +104,12 @@
 	</types>
 	
 
-	<!--types>
+	<types>
 		<members>MineCoCustomSite</members>
 		<name>CustomSite</members>
-	</types-->
+	</types>
 
-	<!--types>
+	<types>
 		<members>MineCoCustomSite</members>
 		<name>Network</members>
 	</types>
@@ -117,7 +117,7 @@
 	<types>
 		<members>MineCoCustomSite1</members>
 		<name>SiteDotCom</members>
-	</types-->
+	</types>
 
 	<version>52.0</version>
 

@@ -5,13 +5,13 @@
 
 .THIS.BackgoundColor
 {
-    background-color: #5B1C08;
+    background-color: #d4cdc1;
 }
 
 /* Style the header */
 .THIS.header 
 {
-    background-color: #D0BD8D;
+    background-color: #a48464;
     padding: 20px;
     text-align: center;
 }
@@ -25,25 +25,25 @@
 .THIS slds-col slds-size_1-of-4
 {
     height: 35em;
-    background-color: #C38370;
+    background-color: #d4cdc1;
 }
 
 .THIS .ProductItem
 {
     width: 33%;
-    background-color: #C38370;
+    background-color: #d4cdc1;
     height: 35em;
 }
 
 .THIS .Description
 {
-    background-color: #C38370;
+    background-color: #d4cdc1;
     height: 70em;
 }
 
 .THIS .DescriptWrap
 {
-    background-color: #D0BD8D;
+    background-color: #a48464;
     width: 60%;
     margin-left: auto;
     margin-right: auto;
@@ -74,7 +74,7 @@
 
 .THIS .productBG_Color
 {
-    background-color: #D0BD8D;    
+    background-color: #a48464;    
     position: sticky;
     border-radius: 20px;
     margin-top: -390px;
