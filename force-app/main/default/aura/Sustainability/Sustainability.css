@@ -1,5 +1,5 @@
 .THIS {
-    background: #C38370;
+    background: #d4cdc1;
     color: #523A28;
     padding: 1rem;
     text-align: 'center';
@@ -19,13 +19,13 @@
 
 .THIS .inner{
     border-radius: 1rem;
-    background-color: #C38370;
+    background-color: #d4cdc1;
     text-align: 'center';
     margin: 1rem;
 }
 
 .THIS .outer{
     border-radius: 1.5rem;
-    background-color: #D0BD8D;
+    background-color: #a48464;
     padding: 1rem;
 }

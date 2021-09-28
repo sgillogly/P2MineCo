@@ -1,5 +1,12 @@
 .THIS {
-    background-color: #D0BD8D;
+    background-color:  #a48464;
+    border-radius: 20px;
+    padding: 20px;
+    margin: 20px;
+}
+
+.THIS .body{
+    background-color:  #d4cdc1;
     border-radius: 20px;
     padding: 20px;
     margin: 20px;

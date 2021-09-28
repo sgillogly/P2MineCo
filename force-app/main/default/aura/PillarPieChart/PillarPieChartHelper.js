@@ -27,7 +27,7 @@
                                 display: true,
                                 position: "bottom",
                                 labels: {
-                                    fontColor: "#FFFFFF",
+                                    fontColor: "#000000",
                                     fontSize: 12,
                                 },
                             },

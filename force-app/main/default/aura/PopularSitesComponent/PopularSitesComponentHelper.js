@@ -55,7 +55,7 @@
     
     ProcessFireEvent : function(component, event){
         let fireEvent = $A.get("e.c:MineCoTabClicked");
-        fireEvent.setParams({"product" : event.target.name});
+        fireEvent.setParams({"product" : "Gold"});
         fireEvent.setParams({"tab" : "Business"});
         fireEvent.fire();
     }

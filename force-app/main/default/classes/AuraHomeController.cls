@@ -1,4 +1,4 @@
-public class AuraHomeController {
+public without sharing class AuraHomeController {
     
 	public static List<MiningSite__c> top3 = [SELECT Location__c, Name, Ore__r.Name FROM MiningSite__c ORDER BY EstimatedWorth__c DESC LIMIT 3];
     
@@ -20,6 +20,11 @@ public class AuraHomeController {
     
     @AuraEnabled
     public static String SiteName(Integer idx){
+        Location loc = top3[idx].Location__c;
+        
+        //String lat = String.valueOf(loc.latitude);
+        //return lat;
+        //return String.valueOf(top3[idx].Location__latitude__s);
         return top3[idx].Name;
     }
     

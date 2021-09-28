@@ -10,14 +10,11 @@
     <aura:attribute name="site3Ore" type="String"/>
     <aura:handler name="init" value="{!this}" action="{!c.loadImgs}"/>
     
-    <!-- 
     <aura:registerEvent name="metalDetail" type="c:MineCoTabClicked" />
-    
-    <aura:handler event="c:MineCoTabClicked" action="{!c.FireEvent}" />
-    -->
+
     <div>
         
-        <div class="outer">
+        <div class="outer" onclick="{!c.FireEvent}">
             <div class="inner">
                 <h1>Our Most Popular Mining Sites</h1> 
                 <p>&ensp;Click an Image to View the Product Page!</p>
@@ -30,7 +27,7 @@
                     <div class="inner">
                         <span>{!v.site1Name}</span><br />
                         <span>Primary Ore: {!v.site1Ore}</span><br />
-                        <img src="{!v.img1Url}" alt="1st most popular mining site"/>
+                        <img src="{!v.img1Url}" alt="1st most popular mining site" onclick="{!c.FireEvent}"/>
                     </div>
                 </div>
             </div>

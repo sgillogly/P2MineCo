@@ -1,9 +1,18 @@
 .THIS {
-    background-color: #D0BD8D;
+    background-color: #a48464;
     /*color: #FFFFFF;*/
-    font-size: 60%;
     height: 150px;
     border-radius: 20px;
-    padding:30px;
+    padding:20px;
+    text-align: right;
+}
+
+.THIS .body{
+    background-color: #d4cdc1;
+    /*color: #FFFFFF;*/
+    font-size: 35%;
+    height: 110px;
+    border-radius: 20px;
+    padding:20px;
     text-align: right;
 }

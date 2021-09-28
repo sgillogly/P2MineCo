@@ -1,4 +1,5 @@
 .THIS {
+    font-family: "Comic Sans";
 }
 #header.THIS {
     /*delete sfsites/c to view in preview)*/
@@ -8,21 +9,21 @@
     background-position: center center;
     width: 100%;
     text-align: center;
-    font-size: 350%;
+    font-size: 500%;
 }
 #tabsBar.THIS {
-    background-color: #5B1C08;
+    background-color: #d4cdc1;
     text-align: center;
 }
 .THIS.body {
-    background-color: #5B1C08;
+    background-color: #d4cdc1;
 }
 
 .THIS .tabButton {
     font-size: 150%;
     height: 3em;
     color: black;
-    --sds-c-button-neutral-color-background: #D0BD8D;
-    --sds-c-button-neutral-color-background-active: #D0BD8D;
-    --sds-c-button-neutral-color-background-hover: #C0BC8C;
+    --sds-c-button-neutral-color-background: #a48464;
+    --sds-c-button-neutral-color-background-active: #a48464;
+    --sds-c-button-neutral-color-background-hover: #a48464;
 }

@@ -37,24 +37,24 @@
                                     display: true,
                                     scaleLabel: {
                                         display: true,
-                                        fontColor: "#FDFEFE",
+                                        fontColor: "#000000",
                                         labelString: 'Carbon Footprint (tons)',
                                     },
                                     ticks: {
                                         beginAtZero: true,
                                         min: 0,
-                                        fontColor: "#FDFEFE",
+                                        fontColor: "#000000",
                                     },
                                     gridLines: {
-        								color: '#FDFEFE',
+        								color: '#000000',
     								},
                                 }],
                                 xAxes: [{
                                     ticks:{
-                                        fontColor: "#FDFEFE", 
+                                        fontColor: "#000000", 
                                     } ,
                                     gridLines: {
-        								color: '#FDFEFE',
+        								color: '#000000',
     								},
                                 }],
                             },

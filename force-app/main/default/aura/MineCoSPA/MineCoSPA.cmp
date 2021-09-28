@@ -1,6 +1,6 @@
 <aura:component implements="forceCommunity:availableForAllPageTypes" access="global">
-    <aura:attribute name="currentTab" type="String" default="Business" />
-    <aura:handler name="metalDetail" event="c:MineCoTabClicked" action="{!c.openTab}"/>
+    <aura:attribute name="currentTab" type="String" default="Home" />
+    <aura:handler event="c:MineCoTabClicked" action="{!c.openTab}"/>
     
     <div id="header" class="slds-grid">
         <div class="slds-col slds-size_1-of-6">
@@ -8,7 +8,7 @@
         </div>
         <div id="headerTitle" class="slds-col">
             <p style="padding: 25px">
-                Optional Title Here
+                Mine Co.
             </p>
         </div>
         <div class="slds-col slds-size_1-of-6">
@@ -29,13 +29,16 @@
         </div>
         <div class="slds-col">
             <aura:if isTrue="{!v.currentTab == 'Home'}" >
-                <p style="color: white">Home Page Here</p>
+                <c:PopularSitesComponent />
             </aura:if>        
             <aura:if isTrue="{!v.currentTab == 'Products'}" >
                 <p style="color: white">Products Page Here</p>
             </aura:if>        
             <aura:if isTrue="{!v.currentTab == 'Sustainability'}" >
-                <p style="color: white">Sustainability Page Here</p>
+                <c:MiningSiteInfo />
+                <c:ChartGrid />
+                <c:Sustainability />
+                
             </aura:if>        
             <aura:if isTrue="{!v.currentTab == 'Business'}" >
                 <c:BusinessComponent />

@@ -42,9 +42,9 @@ public with sharing class SampleDataGenerator {
         System.debug(products[0].id);
 
         List<MiningSite__c> sites = new List<MiningSite__c>();
-        sites.add(new MiningSite__c(Name = 'name1', EstimatedWorth__c = 10000, Location__latitude__s = 30.0, Location__longitude__s = 100, Ore__c = products[0].id));
-        sites.add(new MiningSite__c(Name = 'name2', EstimatedWorth__c = 20000, Location__latitude__s = 30.0, Location__longitude__s = 100, Ore__c = products[1].id));
-        sites.add(new MiningSite__c(Name = 'name3', EstimatedWorth__c = 30000, Location__latitude__s = 30.0, Location__longitude__s = 100, Ore__c = products[2].id));
+        sites.add(new MiningSite__c(Name = 'name1', EstimatedWorth__c = 10000, Location__latitude__s = 0, Location__longitude__s = 50, Ore__c = products[0].id, Carbon_Footprint__c = 100, Active__c = true));
+        sites.add(new MiningSite__c(Name = 'name2', EstimatedWorth__c = 20000, Location__latitude__s = 30.0, Location__longitude__s = 100, Ore__c = products[1].id, Carbon_Footprint__c = 100, Active__c = true));
+        sites.add(new MiningSite__c(Name = 'name3', EstimatedWorth__c = 30000, Location__latitude__s = 30.0, Location__longitude__s = 100, Ore__c = products[2].id, Carbon_Footprint__c = 100, Active__c = true));
         Insert sites;
     }
 

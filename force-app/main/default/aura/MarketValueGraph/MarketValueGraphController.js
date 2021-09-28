@@ -6,6 +6,7 @@
         sampleData.setCallback(this, function(response) {
             var metalsMap = response.getReturnValue();
             helper.chartSetup(component, metalsMap, null);
+            component.set("v.content", "");
         })
         
         $A.enqueueAction(sampleData);
@@ -33,7 +34,7 @@
     },
     
     actualData : function(component, event, helper) {
-        component.set("v.content", event.getParam("product"));
+        component.set("v.content", "Loading " + event.getParam("product") + "...");
         //helper.getData(this, component.get("c.realData"), 15);
         
         let realData = component.get("c.realData");
@@ -41,6 +42,7 @@
         realData.setCallback(this, function(response) {
             var metalsMap = response.getReturnValue();
             helper.chartSetup(component, metalsMap, event.getParam("product"));
+            component.set("v.content", "");
         })
         
         $A.enqueueAction(realData);

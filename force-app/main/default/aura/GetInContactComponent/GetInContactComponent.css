@@ -1,13 +1,13 @@
 .THIS .inner{
     border-radius: 1rem;
-    background-color: #5B1C08;
+    background-color: #d4cdc1;
     text-align: center;
-    color: #D0BD8D;
+    color: black;
 }
 
 .THIS .outer{
     border-radius: 10rem;
-    background-color: #D0BD8D;
+    background-color: #a48464;
     padding: 1rem;
 }
 
@@ -16,9 +16,9 @@
 }
 
 .THIS .slds-form-element__label{
-    color: #D0BD8D;
+    color: black;
 }
 
 .THIS .slds-input{
-    color: #5B1C08
+    color: black;
 }

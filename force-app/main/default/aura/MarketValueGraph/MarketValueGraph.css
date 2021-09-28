@@ -1,10 +1,19 @@
 .THIS {
     /*background-color: #D0BD8D;*/
-    background-color: white;
+    background-color: #a48464;
     border-radius: 20px;
     padding: 20px;
     margin: 20px;
 }
+
+.THIS .body{
+    /*background-color: #D0BD8D;*/
+    background-color: white;
+    border-radius: 20px;
+    padding: 20px;
+    margin: 0px;
+}
+
 canvas.THIS {
     /*width: 1000px !important;*/
     display: none;

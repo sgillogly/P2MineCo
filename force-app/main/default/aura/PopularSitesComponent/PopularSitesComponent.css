@@ -1,10 +1,10 @@
 .THIS {
-    background: #5B1C08;
-    color: #D0BD8D;
+    background: #d4cdc1;
+    color: black;
     padding: 10px;
-    --sds-c-card-color-background: #5B1C08;
-    --sds-c-card-text-color: #D0BD8D; 
-    --sds-c-card-color-border: #D0BD8D; 
+    --sds-c-card-color-background: #d4cdc1;
+    --sds-c-card-text-color: black; 
+    --sds-c-card-color-border: #d4cdc1; 
     --sds-c-card-radius-border: 10px;
     --sds-c-card-sizing-border: 30px;
     --sds-c-card-content-radius-border: 10px;
@@ -16,13 +16,13 @@
 
 .THIS .inner{
     border-radius: 10px;
-    background-color: #5B1C08;
+    background-color: #d4cdc1;
     text-align: center;
 }
 
 .THIS .outer{
     border-radius: 10px;
-    background-color: #D0BD8D;
+    background-color: #a48464;
     padding: 1rem;
 }
 
