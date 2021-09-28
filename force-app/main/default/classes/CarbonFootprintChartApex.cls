@@ -1,4 +1,4 @@
-public class CarbonFootprintChartApex {
+public without sharing class CarbonFootprintChartApex {
     
     @AuraEnabled
     public static list<CarbonFootprintWrapper> getMineData() {
@@ -11,7 +11,7 @@ public class CarbonFootprintChartApex {
         
         return carbonfootprints;
     }
-	public class CarbonFootprintWrapper {
+	public without sharing class CarbonFootprintWrapper {
     	@AuraEnabled public String Name { get; set; }
     	@AuraEnabled public Decimal Carbon_Footprint { get; set; }
     

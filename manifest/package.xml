@@ -102,6 +102,11 @@
 		<members>*</members>
 		<name>AutoResponseRules</members>
 	</types>
+
+	<types>
+		<members>MiningSite__c</members>
+		<name>SharingRules</members>
+	</types>
 	
 
 	<types>

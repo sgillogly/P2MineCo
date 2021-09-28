@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sharingGuestRules>
+        <fullName>Mining_Site_Sharing_for_Guests</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>Mining Site Sharing for Guests</label>
+        <sharedTo>
+            <guestUser>MineCoCustomSite</guestUser>
+        </sharedTo>
+        <criteriaItems>
+            <field>Active__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+        <includeHVUOwnedRecords>false</includeHVUOwnedRecords>
+    </sharingGuestRules>
+</SharingRules>
