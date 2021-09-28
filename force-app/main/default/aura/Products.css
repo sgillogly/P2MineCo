@@ -1,0 +1,88 @@
+.THIS body 
+{
+    margin: 0;
+}
+
+.THIS.BackgoundColor
+{
+    background-color: #5B1C08;
+}
+
+/* Style the header */
+.THIS.header 
+{
+    background-color: #D0BD8D;
+    padding: 20px;
+    text-align: center;
+}
+
+.THIS h1
+{
+    font-size: 50px;
+    color: #523A28;
+}
+
+.THIS slds-col slds-size_1-of-4
+{
+    height: 35em;
+    background-color: #C38370;
+}
+
+.THIS .ProductItem
+{
+    width: 33%;
+    background-color: #C38370;
+    height: 35em;
+}
+
+.THIS .Description
+{
+    background-color: #C38370;
+    height: 70em;
+}
+
+.THIS .DescriptWrap
+{
+    background-color: #D0BD8D;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 20px;
+}
+
+.THIS h2
+{
+    font-size: 30px;
+    text-align: center;
+    color: #523A28;
+}
+
+.THIS p
+{
+    width: 75%;
+    margin-left: 10%;
+    color: #523A28;
+    font-size: 15px;
+}
+
+.THIS img
+{
+    width: 30em;
+    height: 30em;
+    border-radius: 20px;
+}
+
+.THIS .productBG_Color
+{
+    background-color: #D0BD8D;    
+    position: sticky;
+    border-radius: 20px;
+    margin-top: -390px;
+    margin-left: 20px;
+    font-size: 15px;
+}
+
+.THIS .PS
+{
+    font-size: 25px;
+}
