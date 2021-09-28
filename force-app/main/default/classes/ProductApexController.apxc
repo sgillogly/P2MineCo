@@ -1,0 +1,9 @@
+public class ProductApexController 
+{
+    @AuraEnabled
+    public static List<Product2> TheProduct()
+    {
+        List<Product2> TheProducts = [Select Name, Description From Product2];
+        return TheProducts;
+    }
+}
