@@ -17,6 +17,7 @@
     	<members>CarbonFootprintChartApex</members>
         <members>PillarPieChartApex</members>
 		<members>AuraHomeController</members>
+		<members>ProductApexController</members>
 		<name>ApexClass</name>
 	</type>
 
@@ -39,6 +40,8 @@
 		<members>SustainabilityHarness</members>
 		<members>GetInContactComponent</members>
 		<members>PopularSitesComponent</members>
+		<members>ScheduleTourComponent</members>
+		<members>Products</members>
 		<name>AuraDefinitionBundle</members>
 	</types>
 
@@ -67,6 +70,11 @@
 		<name>StaticResource</name>
 	</types>
 
+	<types>
+		<members>GuestUser</members>
+		<name>PermissionSet</name>
+	</types>
+
 <!--	<types>
 		<members>*</members>
 		<name>CustomField</name>
@@ -90,6 +98,10 @@
 		<name>Profile</members>
 	</types>
 	
+	<types>
+		<members>*</members>
+		<name>AutoResponseRules</members>
+	</types>
 	
 
 	<!--types>

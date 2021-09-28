@@ -42,9 +42,9 @@ public with sharing class SampleDataGenerator {
         System.debug(products[0].id);
 
         List<MiningSite__c> sites = new List<MiningSite__c>();
-        sites.add(new MiningSite__c(Name = 'name1', EstimatedWorth__c = 10000, Location__latitude__s = 0, Location__longitude__s = 50, Ore__c = products[0].id, Carbon_Footprint__c = 100, Active__c = true));
-        sites.add(new MiningSite__c(Name = 'name2', EstimatedWorth__c = 20000, Location__latitude__s = 30.0, Location__longitude__s = 100, Ore__c = products[1].id, Carbon_Footprint__c = 100, Active__c = true));
-        sites.add(new MiningSite__c(Name = 'name3', EstimatedWorth__c = 30000, Location__latitude__s = 30.0, Location__longitude__s = 100, Ore__c = products[2].id, Carbon_Footprint__c = 100, Active__c = true));
+        sites.add(new MiningSite__c(Name = 'Warsaw', EstimatedWorth__c = 10000, Location__latitude__s = 52.2297, Location__longitude__s = 21.0122, Ore__c = products[0].id, Carbon_Footprint__c = 37, Active__c = true));
+        sites.add(new MiningSite__c(Name = 'Minsk', EstimatedWorth__c = 20000, Location__latitude__s = 53.9006, Location__longitude__s = 27.559, Ore__c = products[1].id, Carbon_Footprint__c = 93, Active__c = true));
+        sites.add(new MiningSite__c(Name = 'Petaluma', EstimatedWorth__c = 30000, Location__latitude__s = 38.2324, Location__longitude__s = -122.6367, Ore__c = products[2].id, Carbon_Footprint__c = 65, Active__c = true));
         Insert sites;
     }
 

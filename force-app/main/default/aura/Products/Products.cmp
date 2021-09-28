@@ -1,73 +1,68 @@
-<aura:component implements="forceCommunity:availableForAllPageTypes">
-    
-    <!-- 
-        Breakdown of an attribute:
-        - name: this is the attribute name which is referenced on declaration of the component
-        - type: this is the Apex analagous data type the attribute has. Note that if a collection of sObjects is to be used,
-          this must be an array (Account[]). Valid types = Boolean, Date, DateTime, Decimal, Double, Integer, Long, String, Object
-        - default: if no value is specified, the attribute defaults to the default value
-  	-->
+<aura:component >
     
     <aura:attribute name="Product" type="String"> </aura:attribute>
+    <aura:attribute name="viewDescription" type="String"> </aura:attribute>
+    <aura:attribute name="viewDescription1" type="String"> </aura:attribute>
+    <aura:attribute name="viewDescription2" type="String"> </aura:attribute>
+    <aura:attribute name="viewDescription3" type="String"> </aura:attribute>
+    <aura:attribute name="viewDescription4" type="String"> </aura:attribute>
     
-    <!--
-	In-line styling that was used in the div 
-	<div class="productDisplay" style="width:150px;height:150px;border:solid 1px red;background-color:#C0C0C0;float:left">
+    <div class="header">
+        <h1>Products</h1>
+	</div>
     
+    <div class="slds-grid slds-wrap">
+        
+        <div class="slds-col slds-size_1-of-4"> 
+            <div class="Description"> 
+                <br/>
+                <div class="DescriptWrap">
+                    <h2>Products and Services</h2>
+            		<p class="PS">These are the products that we offer at Mine Co. Cick on any item to see more info about the products.</p> 
+                </div>                
+            </div>
+  		</div>
+  
+    	<div class="slds-col slds-size_3-of-4">
+            <div class="slds-grid slds-wrap"> 
+                
+                <div class="ProductItem">
+                    <h2>Uranium</h2>
+                    <img src="https://miningafrica.net//wp-content/uploads/2016/08/Gummite-Uraninite-Zircon-62299.jpg" alt="Uranium" onclick="{!c.viewDescription}"></img>
+                    <p class="productBG_Color">{!v.viewDescription}</p>
+                </div>
+                
+                <div class="ProductItem">
+                    <h2>Tungsten</h2>
+                    <img src="https://cdn.mos.cms.futurecdn.net/w6rw4dJKFqDS69R3D7NHGj-1200-80.jpg" alt="Tungsten" onclick="{!c.viewDescription1}"></img>
+                    <p class="productBG_Color">{!v.viewDescription1}</p>
+                </div>
+                
+                <div class="ProductItem">
+                    <h2>Platinum</h2>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Platinum_crystals.jpg/1200px-Platinum_crystals.jpg" alt="Platinum" onclick="{!c.viewDescription2}"></img>
+                    <p class="productBG_Color">{!v.viewDescription2}</p>
+                </div>
+                
+                <div class="ProductItem">
+                    <h2>Ice</h2>
+                    <img src="https://habrastorage.org/r/w1560/getpro/habr/post_images/fd9/6ee/78a/fd96ee78a3632d0e661b7112b79f1a59.jpg" alt="ice" onclick="{!c.viewDescription3}"></img>
+                    <p class="productBG_Color">{!v.viewDescription3}</p>
+                </div>
+                
+                <div class="ProductItem">
+                    <h2>Iron</h2>
+                    <img src="https://images.squarespace-cdn.com/content/v1/571079941bbee00fd7f0470f/1534799119980-PRY9DCBYV547AHYIOBSH/Iron+%284%29.JPG?format=2500w" alt="iron" onclick="{!c.viewDescription4}"></img>
+                    <p class="productBG_Color">{!v.viewDescription4}</p>
+                </div>
+                
+                <div class="ProductItem">
+                    
+                </div>
+                
+            </div>
+            
+  		</div>
+        
     </div>
-	-->
-    
-    <div class="gallery">
-  		<div class="asc">Uranium</div>
-  		<a target="_blank" href="https://miningafrica.net//wp-content/uploads/2016/08/Gummite-Uraninite-Zircon-62299.jpg">
-    		<img src="https://miningafrica.net//wp-content/uploads/2016/08/Gummite-Uraninite-Zircon-62299.jpg" alt="Uranium" width="600" height="400"></img>
-  		</a>
-	</div>
-
-	<div class="gallery">
-  		<div class="asc">Tungsten</div>  
-  		<a target="_blank" href="https://cdn.mos.cms.futurecdn.net/w6rw4dJKFqDS69R3D7NHGj-1200-80.jpg">
-            <img src="https://cdn.mos.cms.futurecdn.net/w6rw4dJKFqDS69R3D7NHGj-1200-80.jpg" alt="Tungsten" width="600" height="400"></img>
-  		</a>
-	</div>
-
-	<div class="gallery">
-        <div class="asc">Platinum</div>
-  		<a target="_blank" href="https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Platinum_crystals.jpg/1200px-Platinum_crystals.jpg">
-    		<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Platinum_crystals.jpg/1200px-Platinum_crystals.jpg" alt="Platinum" width="600" height="400"></img>
- 		</a>
-	</div>
-    
-
 </aura:component>
-
-<!--
-    <div class="productDisplay">
-        <b class="productService">Products and Services</b> 
-        <p>Description of the products and services will go here.</p>
-    </div>    
-    
-    
-    
-    <div class="productDisplay">
-        <p>Uranium</p>
-        <img id="theImage1" src="https://miningafrica.net//wp-content/uploads/2016/08/Gummite-Uraninite-Zircon-62299.jpg" width="220" height="55" alt="Description of image here"></img>        
-    
-    </div>
-    
-    
-    
-    <div class="productDisplay">
-        <p>Tungsten</p>
-        <img id="theImage2" src="https://cdn.mos.cms.futurecdn.net/w6rw4dJKFqDS69R3D7NHGj-1200-80.jpg" width="220" height="55" alt="Description of image here"></img>
-    
-    </div>
-    
-    
-    
-    <div class="productDisplay">
-        <p>Platinum</p>
-        <img id="theImage3" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Platinum_crystals.jpg/1200px-Platinum_crystals.jpg" width="220" height="55" alt="Description of image here"></img>
-    
-    </div>	
--->
