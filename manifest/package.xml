@@ -21,6 +21,7 @@
 		<members>HomePageTest</members-->
 
 		<members>AuraHomeController</members>-->
+		<members>AuraHomeControllerTest</members>-->
 
 		<!--members>ProductsPageExtension</members-->
 

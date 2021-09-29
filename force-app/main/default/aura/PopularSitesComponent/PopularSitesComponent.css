@@ -1,9 +1,9 @@
 .THIS {
-    background: #5B1C08;
-    color: #D0BD8D;
+    background: #C38370;
+    color: #523A28;
     padding: 10px;
-    --sds-c-card-color-background: #5B1C08;
-    --sds-c-card-text-color: #D0BD8D; 
+    --sds-c-card-color-background: #C38370;
+    --sds-c-card-text-color: #523A28; 
     --sds-c-card-color-border: #D0BD8D; 
     --sds-c-card-radius-border: 10px;
     --sds-c-card-sizing-border: 30px;
@@ -16,7 +16,7 @@
 
 .THIS .inner{
     border-radius: 10px;
-    background-color: #5B1C08;
+    background-color: #C38370;
     text-align: center;
 }
 

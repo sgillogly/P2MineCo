@@ -4,6 +4,12 @@ public class AuraHomeController {
     
     @AuraEnabled
     public static String imageUrlBase(Integer idx){
+        if(idx > 2){
+            idx = Integer.valueof(Math.random() * 2);
+        }  
+        if(idx < 0){
+            idx = Integer.valueof(Math.random() * 2);
+        }
         
         String base = 'https://image.maps.ls.hereapi.com/mia/1.6/mapview?';
         String zoomAndKey = '&z=11&apiKey=NeXaL6Ng_elBhreu8qmyiHjR6SfHo1haBFZev6507Rc';
@@ -14,17 +20,28 @@ public class AuraHomeController {
         String lon = String.valueOf(loc.longitude);
         
 		String url = base + 'c=' + lat + '%2C' + lon + zoomAndKey;
-		System.debug(url);
         return url;
     }
     
     @AuraEnabled
     public static String SiteName(Integer idx){
+        if(idx > 2){
+            idx = Integer.valueof(Math.random() * 2);
+        }  
+        if(idx < 0){
+            idx = Integer.valueof(Math.random() * 2);
+        }
         return top3[idx].Name;
     }
     
     @AuraEnabled
     public static String SiteOre(Integer idx){
+        if(idx > 2){
+            idx = Integer.valueof(Math.random() * 2);
+        }  
+        if(idx < 0){
+            idx = Integer.valueof(Math.random() * 2);
+        }
         return top3[idx].Ore__r.Name;
     }
 }
