@@ -24,13 +24,21 @@ To-do list:
 ## Getting Started
    
 > Clone the repository into a local IDE (VSC recommended), then connect the folder to an empty Salesforce org
+> 
 > Enable digiital experiences in the org
+> 
 > Right click on the package.xml file under manifest and select 'Deploy sources in manifest to org'
+> 
 > Under Digital Experiences in the org select 'All Sites', then open the MineCoCustomSite in Builder
+> 
 > In Settings select the site's guest user under 'Configure Guest User Profile'
+> 
 > Click 'View Users' and select the guest user
+> 
 > Click 'Permission Set Assignments', then 'Edit Assignments', then add the 'GuestPermissions' to the Enabled Permission Sets
+> 
 > Return to the Experience Builder and click Publish
+> 
 > Optionally enter the developer console and run `SampleDataGenerator.generateData();` from the execute anonymous window to generate sample data
 
 ## Usage
