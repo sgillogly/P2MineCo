@@ -23,14 +23,15 @@ To-do list:
 
 ## Getting Started
    
-(include git clone command)
-(include all environment setup steps)
-
-> Be sure to include BOTH Windows and Unix command  
-> Be sure to mention if the commands only work on a specific platform (eg. AWS, GCP)
-
-- All the `code` required to get started
-- Images of what it should look like
+> Clone the repository into a local IDE (VSC recommended), then connect the folder to an empty Salesforce org
+> Enable digiital experiences in the org
+> Right click on the package.xml file under manifest and select 'Deploy sources in manifest to org'
+> Under Digital Experiences in the org select 'All Sites', then open the MineCoCustomSite in Builder
+> In Settings select the site's guest user under 'Configure Guest User Profile'
+> Click 'View Users' and select the guest user
+> Click 'Permission Set Assignments', then 'Edit Assignments', then add the 'GuestPermissions' to the Enabled Permission Sets
+> Return to the Experience Builder and click Publish
+> Optionally enter the developer console and run `SampleDataGenerator.generateData();` from the execute anonymous window to generate sample data
 
 ## Usage
 
