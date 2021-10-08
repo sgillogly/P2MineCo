@@ -39,7 +39,7 @@ To-do list:
 > 
 > Return to the Experience Builder and click Publish
 > 
-> Optionally enter the developer console and run `SampleDataGenerator.generateData();` from the execute anonymous window to generate sample data
+> Optionally enter the developer console and run `SampleDataGenerator.deleteDefaultData(); SampleDataGenerator.generateData();` from the execute anonymous window to generate sample data
 
 ## Usage
 
