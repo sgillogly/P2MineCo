@@ -25,7 +25,7 @@ To-do list:
    
 > Clone the repository into a local IDE (VSC recommended), then connect the folder to an empty Salesforce org
 > 
-> Enable digiital experiences in the org
+> Enable digital experiences in the org
 > 
 > Right click on the package.xml file under manifest and select 'Deploy sources in manifest to org'
 > 
