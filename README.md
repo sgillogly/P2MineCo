@@ -2,24 +2,25 @@
 
 ## Project Description
 
-Here goes your awesome project description!
+Stylistic improvments to the experience site for the client's mining company. Code upgrades to make data displays more dynamic and responsive.
 
 ## Technologies Used
 
-* Tech 1 - version 1.0
-* Tech 2 - version 2.0
-* Tech 3 - version 3.0
+* Lightning Component Framework (Aura)
+* Apex
+* SOQL
+* Service Cloud
+* JavaScript
+* Experience Cloud
+* Lightning Data Service
 
 ## Features
 
 List of features ready and TODOs for future development
-* Awesome feature 1
-* Awesome feature 2
-* Awesome feature 3
-
-To-do list:
-* Wow improvement to be done 1
-* Wow improvement to be done 2
+* Home Page with most-popular mining site locations shown dynamically
+* Sustainability Page with interactive charts
+* Business Page to get in contact and view the Products page
+* Products page to learn more about individual products offered
 
 ## Getting Started
    
