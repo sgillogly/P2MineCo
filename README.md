@@ -49,10 +49,10 @@ To-do list:
 
 ## Contributors
 
-> Sarah Gillogly
-> Shawn Ijaz
-> William Edward
-> Andrew Wensley
+* Sarah Gillogly
+* Shawn Ijaz
+* William Edward
+* Andrew Wensley
 
 ## License
 
